@@ -3,6 +3,10 @@ pipeline {
         label 'dockerbuild'
     }
 
+options {
+        timeout(time: 1, unit: 'HOURS')  // <-- 在这里设置总超时时间
+    }
+    
     parameters{
 
          gitParameter branchFilter: 'origin/(.*)', defaultValue: 'master', name:'GIT_BRANCH',type:'PT_BRANCH_TAG' ,quickFilterEnabled: true

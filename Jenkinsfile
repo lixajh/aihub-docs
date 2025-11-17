@@ -37,11 +37,17 @@ options {
                              recursiveSubmodules: true, 
                              trackingSubmodules: false, 
                              reference: '', 
-                             timeout: 100, 
+                             timeout: 60000, 
                              shallow: false, 
                              noTags: false],
+
+                            [$class: 'CloneOption',
+                             shallow: true,   // 启用浅克隆
+                             noTags: true,    // 不拉取 tags，加快速度
+                             depth: 1]
+
                              [$class: 'CheckoutOption', 
-                             timeout: 30]
+                             timeout:60000]
                         ],
                         userRemoteConfigs: [[
                             url: "${env.GIT_URL}",

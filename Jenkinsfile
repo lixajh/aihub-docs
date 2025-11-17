@@ -44,9 +44,9 @@ options {
                             [$class: 'CloneOption',
                              shallow: true,   // 启用浅克隆
                              noTags: true,    // 不拉取 tags，加快速度
-                             depth: 1]
+                             depth: 1],
 
-                             [$class: 'CheckoutOption', 
+                             [$class: 'CheckoutOption',
                              timeout:60000]
                         ],
                         userRemoteConfigs: [[

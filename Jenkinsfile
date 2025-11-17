@@ -40,6 +40,8 @@ options {
                              timeout: 100, 
                              shallow: false, 
                              noTags: false]
+                             [$class: 'CheckoutOption', 
+                             timeout: 30]
                         ],
                         userRemoteConfigs: [[
                             url: "${env.GIT_URL}",

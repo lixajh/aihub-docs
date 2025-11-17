@@ -39,7 +39,7 @@ options {
                              reference: '', 
                              timeout: 100, 
                              shallow: false, 
-                             noTags: false]
+                             noTags: false],
                              [$class: 'CheckoutOption', 
                              timeout: 30]
                         ],

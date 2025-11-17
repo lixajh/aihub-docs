@@ -2,11 +2,7 @@ site_name: AiHub 使用手册
 site_url: https://lixajh.github.io/docs
 theme:
   name: material
-  font:
-    # 设置字体为 none，表示不从 Google Fonts 加载
-    # 主题会尝试使用系统字体或其内置的 fallback 字体
-    text: false
-    code: false
+  font: false
   language: zh
   features:
     - content.images.zoom
@@ -43,6 +39,11 @@ markdown_extensions:
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
   - 产品简介: index.md  
@@ -95,6 +96,11 @@ nav:
       - 模型评测: 
           - 模型评测: 模型评测.md
           - 性能评测: 性能评测.md
+          - 评测榜单: 评测榜单.md
   - 开发参考:
       - API文档: API文档.md
       - SDK文档: /aihub_sdk_docs/
+        
+extra:
+  polyfills:
+    - iframe-worker.js

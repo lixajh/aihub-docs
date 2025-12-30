@@ -10,6 +10,11 @@ options {
     parameters{
 
          gitParameter branchFilter: 'origin/(.*)', defaultValue: 'master', name:'GIT_BRANCH',type:'PT_BRANCH_TAG' ,quickFilterEnabled: true
+        choice(
+            name: 'ENV',
+            choices: ['dev', 'prod'],
+            description: 'Select deployment environment. If prod, a latest tag will be added.'
+        )
 
     }
     environment {
@@ -103,6 +108,15 @@ options {
             steps {
                 // 推送镜像的命令
                 sh "docker push ${env.DOCKER_REGISTRY}/aied/aihub/${env.DOCKER_NAME}:${env.IMAGE_TAG}"
+
+                script {
+                    if (params.ENV == 'prod') {
+                        sh "docker tag ${env.DOCKER_REGISTRY}/aied/aihub/${env.DOCKER_NAME}:${env.IMAGE_TAG} ${env.DOCKER_REGISTRY}/aied/aihub/${env.DOCKER_NAME}:latest"
+                        h "docker push ${env.DOCKER_REGISTRY}/aied/aihub/${env.DOCKER_NAME}:latest"
+                        h "docker rmi ${env.DOCKER_REGISTRY}/aied/aihub/${env.DOCKER_NAME}:latest"
+                    }
+                }
+
                 sh "docker rmi ${env.DOCKER_REGISTRY}/aied/aihub/${env.DOCKER_NAME}:${env.IMAGE_TAG}"
             }
         }

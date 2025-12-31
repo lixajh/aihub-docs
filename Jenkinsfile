@@ -112,8 +112,8 @@ options {
                 script {
                     if (params.ENV == 'prod') {
                         sh "docker tag ${env.DOCKER_REGISTRY}/aied/aihub/${env.DOCKER_NAME}:${env.IMAGE_TAG} ${env.DOCKER_REGISTRY}/aied/aihub/${env.DOCKER_NAME}:latest"
-                        h "docker push ${env.DOCKER_REGISTRY}/aied/aihub/${env.DOCKER_NAME}:latest"
-                        h "docker rmi ${env.DOCKER_REGISTRY}/aied/aihub/${env.DOCKER_NAME}:latest"
+                        sh "docker push ${env.DOCKER_REGISTRY}/aied/aihub/${env.DOCKER_NAME}:latest"
+                        sh "docker rmi ${env.DOCKER_REGISTRY}/aied/aihub/${env.DOCKER_NAME}:latest"
                     }
                 }
 

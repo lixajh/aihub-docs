@@ -1,0 +1,3883 @@
+<!DOCTYPE html><html lang="zh" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lixajh.github.io/docs/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86.html">
+      
+      
+        <link rel="prev" href="%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86.html">
+      
+      
+        <link rel="next" href="%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>工作流管理 - AiHub 使用手册</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="iframe-worker.js"></script>
+      
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="index.html" title="AiHub 使用手册" class="md-header__button md-logo" aria-label="AiHub 使用手册" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AiHub 使用手册
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              工作流管理
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="AiHub 使用手册" class="md-nav__button md-logo" aria-label="AiHub 使用手册" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    AiHub 使用手册
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    产品简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速入门
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    快速入门
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    登录注册
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E7%AE%97%E6%B3%95%E4%BA%BA%E5%91%98%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    标注任务：从发起到验收
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%A0%87%E6%B3%A8%E4%BA%BA%E5%91%98%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    标注任务：从接收到交付
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E4%BB%BB%E5%8A%A1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型训练：创建与监控
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-%E5%88%9B%E5%BB%BA%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%BB%BB%E5%8A%A1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工作流：创建、运行与监控
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%9E%8B%E8%AF%84%E6%B5%8B%E4%BB%BB%E5%8A%A1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型评测：创建与查看结果
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    操作指南
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    操作指南
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Dashboard.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    任务中心
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    任务中心
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    任务管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%B7%A5%E6%97%B6%E7%AE%A1%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工时管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E6%A0%87%E6%B3%A8%E4%BB%BB%E5%8A%A1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据标注任务
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E6%8E%A5%E5%85%A5%E4%BB%BB%E5%8A%A1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据接入任务
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%A4%96%E7%BD%91%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%E4%BB%BB%E5%8A%A1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    外网数据下载任务
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%96%87%E6%A1%A3%E4%B8%AD%E5%BF%83.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文档中心
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据仓库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E9%9B%86%E7%AE%A1%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据集管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6">
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据标注
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数据标注
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%A0%87%E6%B3%A8%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    标注项目管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_2" id="__nav_3_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据集格式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数据集格式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%BC%E5%BC%8F_COCO.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    COCO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%BC%E5%BC%8F_VOC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VOC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%BC%E5%BC%8F_IF_DATA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IF_DATA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%BC%E5%BC%8F_%E8%A7%86%E9%A2%91%E6%A0%87%E6%B3%A8.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    视频标注
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%BC%E5%BC%8F_%E6%A1%A3%E6%A1%88%E6%B8%85%E6%B4%97%E5%90%88%E5%B9%B6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    档案清洗合并
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_3" id="__nav_3_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据标注
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数据标注
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    目标检测
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图像分类
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E8%A7%86%E9%A2%91%E5%88%86%E7%B1%BB.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    视频分类
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E8%A7%86%E9%A2%91%E6%A0%87%E6%B3%A8.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    视频标注
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%A1%A3%E6%A1%88%E6%B8%85%E6%B4%97%E5%90%88%E5%B9%B6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    档案清洗合并
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%AF%B4%E6%98%8E.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快捷键说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据导出
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_5">
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_5" id="__nav_3_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    标注质量管理
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    标注质量管理
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E9%9B%86%E5%8F%AF%E8%A7%86%E5%8C%96.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据集可视化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E4%B8%80%E8%87%B4%E6%80%A7%E6%B5%8B%E8%AF%95.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    一致性测试
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%A3%80.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据质检
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E9%97%AE%E9%A2%98%E4%B8%AD%E5%BF%83.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    问题中心
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%A0%87%E6%B3%A8%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    标注团队管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E7%BB%A9%E6%95%88%E7%AE%A1%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    绩效管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    镜像管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工作流管理
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工作流管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        术语说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        系统设计
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快速开始
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模块管理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模块管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        创建模块
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        调试模块
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模板管理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模板管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        创建模板
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模块/模板审核
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模块/模板审核">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模块状态流转
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模板状态流转
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工作流
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="工作流">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        创建工作流
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="创建工作流">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本信息
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参数说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        草稿
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        试运行
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        查看工作流
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运行工作流
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复制工作流
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-workflow-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        调试工作流节点{#debugging-workflow-nodes}
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运行实例
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="运行实例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        创建运行实例{#create-run}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        查看运行实例
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复制运行实例
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模板节点的使用和运行
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模板节点的使用和运行">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflow-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工作流模块开发指引
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="工作流模块开发指引">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模块结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模块开发要求
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模块开发要求">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模块代码开发要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模块发布流程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模块调试指引
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模块调试指引">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        代码调试
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模块调试
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameter-passing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参数传递匹配和类型说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型训练
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10">
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型中心
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    模型中心
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="models/%E6%A8%A1%E5%9E%8B%E7%AE%A1%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="models/%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型部署
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%88%91%E7%9A%84notebook.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    我的应用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12">
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型评测
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    模型评测
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%A8%A1%E5%9E%8B%E8%AF%84%E6%B5%8B.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型评测
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%80%A7%E8%83%BD%E8%AF%84%E6%B5%8B.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    性能评测
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E8%AF%84%E6%B5%8B%E6%A6%9C%E5%8D%95.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    精度评测榜单
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%80%A7%E8%83%BD%E8%AF%84%E6%B5%8B%E6%A6%9C%E5%8D%95.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    性能评测榜单
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开发参考
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    开发参考
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="API%E6%96%87%E6%A1%A3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API文档
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/aihub_sdk_docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDK文档
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        术语说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        系统设计
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快速开始
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模块管理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模块管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        创建模块
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        调试模块
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模板管理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模板管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        创建模板
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模块/模板审核
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模块/模板审核">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模块状态流转
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模板状态流转
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工作流
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="工作流">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        创建工作流
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="创建工作流">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本信息
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参数说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        草稿
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        试运行
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        查看工作流
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运行工作流
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复制工作流
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-workflow-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        调试工作流节点{#debugging-workflow-nodes}
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运行实例
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="运行实例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        创建运行实例{#create-run}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        查看运行实例
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复制运行实例
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模板节点的使用和运行
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模板节点的使用和运行">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflow-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工作流模块开发指引
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="工作流模块开发指引">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模块结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模块开发要求
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模块开发要求">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模块代码开发要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模块发布流程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模块调试指引
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模块调试指引">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        代码调试
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        模块调试
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameter-passing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参数传递匹配和类型说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>工作流管理</h1>
+
+<h3 id="_1">术语说明</h3>
+<table>
+<thead>
+<tr>
+<th><strong>术语</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>工作流</td>
+<td>工作流是对机器学习Pipeline的描述，包括Pipeline中的所有组件以及这些组件如何以图形的形式相互关联。工作流配置包括运行工作流所需的输入参数以及每个组件的输入和输出的定义。</td>
+</tr>
+<tr>
+<td>工作流节点</td>
+<td>节点是工作流中的基本执行单元，对应一个具体的任务或模块。每个节点负责执行某段逻辑，接收输入参数，产生输出结果，并与前后节点通过依赖关系进行连接。工作流节点分为普通节点和模块节点。</td>
+</tr>
+<tr>
+<td>工作流模块</td>
+<td>工作流模块是从具体工作流节点中抽象出的可复用工作单元，其设计理念类似于“可重入函数”，具备如下核心特性：1. 单一职责：一个模块完成一个清晰、明确的任务。名称准确表达其功能。  2. 通用性：具备通用逻辑、良好参数设计，能在多个场景复用   3.确定性：模块的输出仅由其输入决定，不依赖外部不可见状态（如硬编码路径、环境变量），输入（输入参数，环境变量）相同时应产生相同输出；模块开发文档请参考：<a href="#workflow-guide">工作流模块开发指引</a></td>
+</tr>
+<tr>
+<td>工作流模板</td>
+<td>工作流模板是将经过验证、调试的工作流版本进行固化和抽象的产物。它作为一种可复用的蓝图，允许用户基于此快速创建新的工作流，从而避免重复构建，并促进流程标准化。</td>
+</tr>
+<tr>
+<td>运行实例</td>
+<td>运行实例是工作流的单次执行。</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/diagram.png"></a></p>
+<h2 id="_2">系统设计</h2>
+<ul>
+<li>
+<p>统一管理工作流及其版本，运行工作流会生成一个运行实例</p>
+</li>
+<li>
+<p>统一管理运行实例，支持查看、复制、停止、重试等操作</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/diagram-1.png"></a></p>
+<ol>
+<li>
+<p>创建工作流：生成一个工作流并在该工作流下生成一个版本</p>
+</li>
+<li>
+<p>新增版本：在已有的工作流下生成一个新版本</p>
+</li>
+</ol>
+<h2 id="_3">快速开始</h2>
+<ol>
+<li>
+<p>工作流页面点击创建工作流</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image.png"></a></p>
+</li>
+<li>
+<p>填写基本信息</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-1.png"></a></p>
+</li>
+<li>
+<p>编辑初始输入参数和节点依赖关系</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/diagram-2.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/diagram-3.png"></a></p>
+</li>
+<li>
+<p>添加模块节点</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/diagram-4.png"></a></p>
+</li>
+<li>
+<p>编辑节点信息</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/diagram-5.png"></a></p>
+</li>
+<li>
+<p>点击最下方提交按钮，保存工作流信息。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-2.png"></a></p>
+</li>
+<li>
+<p>保存的工作流可在工作流列表查看，点击运行按钮，跳转到创建运行实例界面</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-3.png"></a></p>
+</li>
+<li>
+<p>编辑运行实例名称后输入参数后，点击创建，创建一个运行实例。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-4.png"></a></p>
+</li>
+<li>
+<p>创建后可在运行实例列表点击查看运行实例</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-5.png"></a></p>
+</li>
+<li>
+<p>流程图中的节点颜色表示该步骤的运行状态，蓝色表示运行中，绿色表示成功，红色表示失败，灰色表示等待中,节点名称后面括号里的数字表示重试次数。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-6.png"></a></p>
+</li>
+<li>
+<p>点击流程图中的单个节点，可以看到该步骤运行的详细信息</p>
+</li>
+</ol>
+<div style="display: flex; justify-content: space-between;">
+  <div style="text-align: center;">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/工作流管理/image-7.png" style="width: 90%;"></a>
+    <p>输入输出</p>
+  </div>
+  <div style="text-align: center;">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/工作流管理/image-8.png" style="width: 90%;"></a>
+    <p>详情</p>
+  </div>
+</div>
+<div style="display: flex; justify-content: space-between;">
+  <div style="text-align: center;">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/工作流管理/image-9.png" style="width: 90%;"></a>
+    <p>日志</p>
+  </div>
+  <div style="text-align: center;">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/工作流管理/image-10.png" style="width: 90%;"></a>
+    <p>容器</p>
+  </div>
+</div>
+<div style="display: flex; justify-content: space-between;">
+  <div style="text-align: center;">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/工作流管理/image-11.png" style="width: 50%;"></a>
+    <p>k8s事件</p>
+  </div>
+</div>
+
+<h2 id="_4"></h2>
+<h2 id="_5">模块管理</h2>
+<p>在模块管理可以查看所有已发布和未发布的工作流模块，支持创建模块，模块的详细要求，请参考<a href="#workflow-guide">模块开发指引</a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-12.png"></a></p>
+<h3 id="_6">创建模块</h3>
+<p>点击创建模块按钮，跳转创建模块页面，依次填写相关参数后，点击提交。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-13.png"></a></p>
+<p>参数说明：</p>
+<ol>
+<li>
+<p>功能分类： 模块的功能分类，如需添加分类请联系管理员。</p>
+</li>
+<li>
+<p>模块名称：请填写清晰表明模块作用的模块名称，支持小写字母数字和-。</p>
+</li>
+<li>
+<p>描述：请简要描述模块功能</p>
+</li>
+<li>
+<p>git地址：模块代码的git仓库地址，比如：http://192.168.70.8/aisdp/data_service/pipeline_demo</p>
+</li>
+<li>
+<p>branch/tag: 模块代码的分支或tag，比如：master、lyy-demo</p>
+</li>
+<li>
+<p>dockerfile路径：模块代码的dockerfile路径，在项目中的相对路径，比如: Dockerfile、modules/hash_file/Dockerfile</p>
+</li>
+<li>
+<p>构建目录：模块镜像的构建目录，跟Dockerfile中COPY的写法有关，比如：/modules/hash_file</p>
+</li>
+<li>
+<p>说明文件路径: 模块的说明文件路径，说明文件需使用markdown格式，在项目中的相对路径，比如:readme.md、modules/hash_file/readme.md</p>
+</li>
+<li>
+<p>建议配置： 模块的建议配置，如 8*4090GPU，256G内存，48核CPU</p>
+</li>
+<li>
+<p>环境变量：支持键值对格式传递至容器环境，适用于自定义运行参数。环境变量可以选择必填或非必填。</p>
+</li>
+<li>
+<p>输入参数：定义模块的输入参数，需写明输入参数的名称和说明，在执行命令中引用输入参数时，需在参数 <code>Key</code> 前加上 <code>$</code>（例如：<code>$param_name</code>）具体规则请参考<a href="#parameter-passing">参数传递</a>。输入参数可以选择必填或非必填。非必填的参数在创建工作流的时候可以不赋值。</p>
+</li>
+<li>
+<p>输出参数：用于传递数据至后续工作流节点，需填写四个字段：参数名称，输出文件路径，参数类型，参数说明。具体规则请参考<a href="#parameter-passing">参数传递</a>。</p>
+</li>
+</ol>
+<p>参数填写示例：</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-14.png"></a></p>
+<h3 id="_7">调试模块</h3>
+<p>调试模块与调试工作流节点类似，区别在于配置参数不同，模块调试需要自行配置节点类型，sku数量，环境变量和存储挂载。详细调试方法请参考<a href="#debugging-workflow-nodes">调试工作流节点</a></p>
+<h2 id="_8">模板管理</h2>
+<p>在模板管理可以查看所有已发布和未发布的工作流模板，并支持创建工作流模板。
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image44.png"></a></p>
+<h3 id="_9">创建模板</h3>
+<p>点击“创建工作流模板”按钮，跳转创建工作流模板页面，依次填写相关参数后，点击“创建模板”。
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image45.png"></a></p>
+<p>参数说明：</p>
+<ol>
+<li>模板名称：请填写清晰表明模板作用的名称，支持小写字母数字和-。</li>
+<li>工作流选择：依次选择要转为模板的工作流和具体版本。</li>
+<li>标签：选择相应的模板标签。</li>
+<li>输入参数：无需填写，选择工作流和版本后，将自动展示对应的初始输入参数。</li>
+<li>输出参数：请选择该工作流版本特定节点（源节点名称）的特定输出参数（源节点输出参数）作为整个工作流模板的输出参数，并定义一下模板输出参数的参数名（输出参数）。</li>
+<li>描述：请简要描述模板功能。</li>
+</ol>
+<h2 id="_10">模块/模板审核</h2>
+<p>用户可在模块/模板审核页面查看工作流模块和模板的审核情况，可以审核通过或拒绝用户审核请求，审核不通过时，需说明不通过的理由；审核通过后，模块变为已发布状态，全体用户可在工作流中自由引用使用。</p>
+<p>由各组leader统筹本组模块/模板审核，可leader自行审核或安排同组同事交叉审核，审核人需对提交的模块/模板代码进行审核把关，确保模块/模板：</p>
+<ul>
+<li>功能准确、文档完整；</li>
+<li>输入输出规范、可复用性强。</li>
+</ul>
+<p>模块审核规则请参考：<a href="#workflow-guide">工作流模块开发指引</a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-15.png"></a></p>
+<h3 id="_11">模块状态流转</h3>
+<p>模块创建或编辑完成后，系统将根据配置的代码仓库与 Dockerfile 自动构建模块镜像。镜像构建成功后，模块将对创建者本人可见，创建者可在工作流中直接引用并使用。</p>
+<p>若需将模块提供给团队或平台用户共享使用，创建者可提交发布申请。模块发布需经管理员或所属团队 Leader 审核，审核通过后，模块将进入“已发布”状态，向所有用户开放引用；</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/diagram-6.png"></a></p>
+<h3 id="_12">模板状态流转</h3>
+<p>工作流模板的状态流转与模块相似，都需要经过审核才可向所有用户开放，与模块不同的是：</p>
+<ol>
+<li>工作流模板创建后默认为构建成功状态，没有构建中状态；</li>
+<li>如果模板审核不通过，不能编辑后重新提交审核，需重新创建新的工作流模板进行发布和审核；</li>
+</ol>
+<h2 id="_13">工作流</h2>
+<p>在工作流模块可以查看所有工作流及每个工作流的所有版本，支持创建工作流或在已有的工作流上新增版本</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-16.png"></a></p>
+<h3 id="_14">创建工作流</h3>
+<p>填写基本信息。并在画布添加节点和依赖关系</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/diagram-7.png"></a></p>
+<h4 id="_15"><strong>基本信息</strong></h4>
+<ol>
+<li>
+<p><strong>工作流名称</strong>：工作流的唯一标识名称。</p>
+</li>
+<li>
+<p><strong>版本名称</strong>：工作流版本的名称。</p>
+</li>
+<li>
+<p><strong>描述</strong>：简要描述该工作流的功能。</p>
+</li>
+<li>
+<p><strong>初始输入参数</strong>：初始输入参数为工作流提供初始数据输入，在创建运行实例时赋值。输入参数类型：</p>
+<ul>
+<li>
+<p><code>文本</code>：普通文本类型；</p>
+</li>
+<li>
+<p><code>数据集</code>： AIHub数据集管理的数据集资源， 实际传给工作流节点是数据集ID，需要节点自行解析访问资源。</p>
+</li>
+<li>
+<p><code>模型</code>： AIHub模型管理的模型资源， 实际传给工作流节点是模型ID，需要节点自行解析访问资源。</p>
+</li>
+</ul>
+<p>数据集和模型解析示例代码：
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>from aihub.client import Client
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a># 假设该工作流初始输入参数的数据集参数名称为dataset_version_id，模型参数名称为model_id
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a># 初始化client
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>client = Client(base_url=your_base_url, token=TOKEN)
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a># 获取数据集路径
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>dataset = client.dataset_management.get_dataset_version($dataset_version_id)
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>print(dataset.file_storage_path) # 数据集路径。访问该路径，请注意在节点挂载数据存储aihub_dataset
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a># 获取模型路径
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>model_db = client.model_center.get_model_db(id=$model_id)
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>print(model_db.file_storage_path)# 模型路径。访问该路径，请注意在节点挂载数据存储aihub_modelcenter
+</code></pre></div><p></p>
+</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/diagram-8.jpg"></a></p>
+<h4 id="_16"><strong>参数说明</strong></h4>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-17.png"></a></p>
+<ol>
+<li>
+<p><strong>任务名称</strong>：工作流节点的唯一标识名称。</p>
+</li>
+<li>
+<p><strong>执行命令</strong>：容器的启动命令，支持引用下方定义的 输入参数，并可访问 勾选的数据存储路径。</p>
+</li>
+<li>
+<p><strong>镜像地址</strong>：内网请填写 99.199 镜像仓库 的镜像地址，外网请填写 14.129 镜像仓库 的镜像地址。</p>
+</li>
+<li>
+<p><strong>任务类型</strong>：任务类型分为“监控任务”和计算任务两种类型，监控任务固定分配100mCPU（1000m=1CPU）和1000M内存，推荐用于通过API监听其他模块执行情况（如模型训练任务是否完成等）。计算任务的资源通过虚拟集群和sku数量确定，用于GPU和内存密集型任务。</p>
+</li>
+<li>
+<p><strong>虚拟集群</strong>：展示可用的 计算资源，例如 <code>RTX2080x8</code>（资源 SKU：<code>1GPU、10CPU、80GB 内存</code>）。</p>
+</li>
+<li>
+<p>资源 SKU 代表最小分配单元，包括 GPU、CPU 和内存 资源。</p>
+</li>
+<li>
+<p>支持 GPU 虚拟集群及纯 CPU 虚拟集群，可按需选择。</p>
+</li>
+<li>
+<p><strong>SKU 数量</strong>：分配的 资源 SKU 数量，默认为 <code>1</code>，不可小于 <code>1</code>。</p>
+</li>
+<li>
+<p><strong>重试次数</strong>：任务失败时的自动重试次数，可避免因短暂异常导致任务终止。</p>
+</li>
+<li>
+<p><strong>环境变量</strong>：支持键值对格式传递至容器环境，适用于自定义运行参数。</p>
+</li>
+<li>
+<p><strong>输入参数</strong>：定义工作流节点的输入参数，需写明输入参数的名称和说明，在执行命令中引用输入参数时，需在参数 <code>Key</code> 前加上 <code>$</code>（例如：<code>$param_name</code>）具体规则请参考<a href="#parameter-passing">参数传递</a>。</p>
+</li>
+<li>
+<p><strong>输出参数</strong>：用于传递数据至后续工作流节点，需填写三个字段：参数名称，输出文件路径，参数类型。具体规则请参考<a href="#parameter-passing">参数传递</a>。</p>
+</li>
+<li>
+<p><strong>数据存储</strong>：支持挂载存储路径至容器，勾选相应路径后，可在 执行命令 中访问。</p>
+</li>
+</ol>
+<blockquote>
+<p>若有需要访问的存储路径不在列表中，请联系管理员进行添加</p>
+</blockquote>
+<h3 id="_17">草稿</h3>
+<p>在创建工作流过程中，可随时将正在创建的工作流暂存为草稿或执行试运行。点击暂存后，数据被存储到工作流，下次编辑时可在【工作流 - 草稿箱】找到，可继续编辑或删除草稿。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-49.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-50.png"></a></p>
+<h3 id="_18">试运行</h3>
+<p>用户在编辑工作流时，可随时点击右上角的【试运行】按钮，打开试运行配置页面，填写相关参数后，点击【开始试运行】，即可在不保存工作流的情况下，执行试运行，查看运行结果。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-51.png"></a></p>
+<p>填写试运行参数：</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-52.png"></a></p>
+<p>查看试运行状态：</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-53.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-54.png"></a></p>
+<h3 id="_19">查看工作流</h3>
+<p>点击工作流的版本名称，可以跳转至工作流的详情页。可以查看工作流的流程图</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-18.png"></a></p>
+<p>点击流程图中的单个节点，可以看到该组件的详细信息</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-19.png"></a></p>
+<h3 id="_20">运行工作流</h3>
+<p>可以在版本列表或版本详情页点击运行以<a href="#create-run">创建运行实例</a></p>
+<div style="display: flex; justify-content: space-between;">
+  <div style="text-align: center;">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/工作流管理/image-20.png" style="width: 90%;"></a>
+    <p>版本列表</p>
+  </div>
+  <div style="text-align: center;">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/工作流管理/image-21.png" style="width: 90%;"></a>
+    <p>版本详情页</p>
+  </div>
+</div>
+
+<h3 id="_21">复制工作流</h3>
+<p>对于使用模板创建的工作流版本，支持在版本列表点击复制按钮，跳转到复制页面。如果工作流版本中包含别人未发布的模块或已删除的模块，则该工作流版本不可复制。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-22.png"></a></p>
+<p>所有配置项的内容都会复制过来，且支持修改</p>
+<div style="display: flex; justify-content: space-between;">
+  <div style="text-align: center;">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/工作流管理/image-23.png" style="width: 90%;"></a>
+    <p>在当前工作流下生成新版本</p>
+  </div>
+  <div style="text-align: center;">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/工作流管理/image-24.png" style="width: 90%;"></a>
+    <p>生成新的工作流</p>
+  </div>
+</div>
+
+<h3 id="debugging-workflow-nodes">调试工作流节点{#debugging-workflow-nodes}</h3>
+<p>在工作流详情 - 节点详情 点击【创建调试】按钮，填写相关信息，即可一键创建调试任务。</p>
+<p>调试任务将自动使用节点镜像、SKU 配置、环境变量和存储挂载，并生成独立的调试容器。</p>
+<p>所有调试任务运行于独立的 4090 Debug 集群，无需排队。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-39.png"></a></p>
+<p>等待镜像拉取完成后，点击【打开调试】按钮，将自动打开一个调试终端，可以直接在终端输入命令进行调试。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-40.png"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-41.png"></a>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-42.png"></a></p>
+<p>调试任务可手动关闭，或在达到超时时间后自动终止。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-43.png"></a></p>
+<h2 id="_22">运行实例</h2>
+<p>在运行实例模块可以看到所有运行实例的状态和对应的工作流及版本，支持查看、复制、停止、重试等操作</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-25.png"></a></p>
+<h3 id="create-run">创建运行实例{#create-run}</h3>
+<p>点击创建运行实例的按钮，会跳转到创建页。选择工作流版本后，需要填写相应的运行参数</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-26.png"></a></p>
+<h3 id="_23">查看运行实例</h3>
+<p>点击运行实例名称，可以跳转至运行实例的详情页。可以查看其流程图和配置信息，支持复制、停止、重试（已完成的节点不再重新执行，从失败和未完成的节点开始重试）</p>
+<div style="display: flex; justify-content: space-between;">
+  <div style="text-align: center;">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/工作流管理/image-27.png" style="width: 90%;"></a>
+    <p>流程图</p>
+  </div>
+  <div style="text-align: center;">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/工作流管理/image-28.png" style="width: 90%;"></a>
+    <p>配置信息</p>
+  </div>
+</div>
+
+<p>流程图中的节点颜色表示该步骤的运行状态，蓝色表示运行中，绿色表示成功，红色表示失败，灰色表示等待中</p>
+<p>点击流程图中的单个节点，可以看到该步骤运行的详细信息如下：</p>
+<div style="display: flex; justify-content: space-between;">
+  <div style="text-align: center;">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/工作流管理/image-29.png" style="width: 90%;"></a>
+    <p>输入输出</p>
+  </div>
+  <div style="text-align: center;">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/工作流管理/image-30.png" style="width: 90%;"></a>
+    <p>详情</p>
+  </div>
+</div>
+<div style="display: flex; justify-content: space-between;">
+  <div style="text-align: center;">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/工作流管理/image-31.png" style="width: 90%;"></a>
+    <p>日志</p>
+  </div>
+  <div style="text-align: center;">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/工作流管理/image-32.png" style="width: 90%;"></a>
+    <p>容器</p>
+  </div>
+</div>
+<div style="display: flex; justify-content: space-between;">
+  <div style="text-align: center;">
+    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="images/工作流管理/image-33.png" style="width: 50%;"></a>
+    <p>k8s事件</p>
+  </div>
+</div>
+
+<h3 id="_24">复制运行实例</h3>
+<p>在运行实例的列表页点击复制按钮，会将包括运行参数的所有内容复制，支持修改部分信息</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-34.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-35.png"></a></p>
+<h2 id="_25">模板节点的使用和运行</h2>
+<p>模板节点添加引用与模块节点类似，可正常接收上游节点参数和向下游节点传递参数。需要特别注意的点：</p>
+<ol>
+<li>模板节点的输入参数只能是普通文本类型，不支持文件路径类型；</li>
+<li>编辑模式下工作流模板不能展开；</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image46.png"></a></p>
+<p>在运行实例中，模板节点默认是收起状态，可以点击右上角的加号展开模板节点，查看节点详情。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image47.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image48.png"></a></p>
+<h3 id="workflow-guide">工作流模块开发指引</h3>
+<h4 id="_26">定义</h4>
+<p>工作流模块是从具体工作流节点中抽象出的可复用工作单元，其设计理念类似于“<strong>可重入函数</strong>”，具备如下核心特性：</p>
+<ul>
+<li>
+<p><strong>单一职责：</strong>一个模块完成一个清晰、明确的任务。名称准确表达其功能。</p>
+</li>
+<li>
+<p><strong>通用性</strong>：具备通用逻辑、良好参数设计，能在多个场景复用</p>
+</li>
+<li>
+<p><strong>确定性</strong>：模块的输出仅由其输入决定，不依赖外部不可见状态（如硬编码路径、环境变量），输入（输入参数，环境变量）相同时应产生相同输出；</p>
+</li>
+</ul>
+<h4 id="_27">模块结构</h4>
+<p>模块包含以下字段：</p>
+<p><strong>功能分类</strong>：模块所属的功能类别，用于组织和检索模块。</p>
+<p><strong>模块名称</strong>：模块的唯一标识符，建议简洁明了，便于引用和管理。</p>
+<p><strong>描述</strong>：对模块功能和用途的简要说明，帮助用户快速了解模块的作用。</p>
+<p><strong>代码配置</strong>：模块代码的相关配置信息，包括：</p>
+<ul>
+<li>
+<p><strong>Git 仓库地址</strong>：存放模块源代码的 Git 仓库完整 URL。</p>
+</li>
+<li>
+<p><strong>Branch/Tag</strong>：指定用于构建模块的分支或标签。</p>
+</li>
+<li>
+<p><strong>Dockerfile 路径</strong>：用于构建模块镜像的 Dockerfile 文件路径。</p>
+</li>
+<li>
+<p><strong>构建路径</strong>：镜像构建路径。</p>
+</li>
+<li>
+<p><strong>说明文件路径</strong>：模块说明文档（ README.md）的路径，详细说明模块功能，使用方式，资源要求等。</p>
+</li>
+</ul>
+<p><strong>环境变量</strong>：模块运行时需要设置的环境变量列表，用于配置模块的运行环境。</p>
+<p><strong>输入参数</strong>：模块执行所需的输入信息，每个参数应包括名称和说明。具体参数含义和要求请参考<a href="#parameter-passing">参数传递</a>。</p>
+<p><strong>输出参数</strong>：模块执行后产生的输出信息，用于传递给下游节点，每个参数应包括名称、类型和输出路径和说明。具体参数含义和要求请参考<a href="#parameter-passing">参数传递</a>。</p>
+<h4 id="_28">模块开发要求</h4>
+<ul>
+<li>所有输入参数必须显式定义，拒绝隐式外部依赖；</li>
+</ul>
+<p>典型问题：某些模块的输入参数是一个配置文件路径，配置文件中包含依赖数据集的共享盘路径。表面上看，输入参数未发生变化，但当共享盘路径变动时，模块将因找不到数据而执行失败，排查成本高，行为不可控。</p>
+<p>模块处理建议：</p>
+<ul>
+<li>
+<p>方案一：将配置文件中的可变信息（如共享盘路径）提取为显式输入参数，在运行时配置；</p>
+</li>
+<li>
+<p>方案二：或将所依赖的数据集直接打包进镜像，在模块中引用镜像内固定路径，避免运行时依赖外部环境。</p>
+</li>
+<li>
+<p>模块输出物的保存路径，可以写到平台约定的工作目录：<code>/tmp/workflow_space</code> 的子目录，或者用输入参数指定保存的路径。</p>
+</li>
+<li>
+<p>模块执行过程应具备健壮性，如发生错误需明确抛出异常并返回非零退出码；</p>
+</li>
+<li>
+<p>模块应支持标准化参数调用方式，具备良好的命令行可配置能力</p>
+</li>
+</ul>
+<h5 id="_29">模块代码开发要求</h5>
+<ul>
+<li><strong>模块代码遵循如下结构</strong>：</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="l l-Scalar l-Scalar-Plain">模块项目</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="l l-Scalar l-Scalar-Plain">├── Dockerfile</span><span class="w">            </span><span class="c1">### 镜像构建文件，容器入口命令需使用entrypoint形式，并支持    --param=value 参数方式</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="l l-Scalar l-Scalar-Plain">├── README.md</span><span class="w">             </span><span class="c1">### 使用说明，需使用markdown格式</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="l l-Scalar l-Scalar-Plain">└── （其他逻辑代码）</span>
+</code></pre></div>
+<ul>
+<li><strong>Dockerfile 中必须使用 <code>ENTRYPOINT</code> 作为镜像的启动命令，禁止使用 <code>CMD</code></strong>，以确保平台参数注入的一致性与可控性；</li>
+</ul>
+<p>示例Dockerfile：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>FROM<span class="w"> </span><span class="m">192</span>.168.99.199:8080/aied/python:3.9-slim
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1">### 设置工作目录</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>WORKDIR<span class="w"> </span>/app
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">### 拷贝当前目录内容到容器中</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>COPY<span class="w"> </span>.<span class="w"> </span>/app
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="c1">### 设置启动命令（main.py支持参数注入）</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>ENTRYPOINT<span class="w"> </span><span class="o">[</span><span class="s2">"python"</span>,<span class="w"> </span><span class="s2">"main.py"</span><span class="o">]</span>
+</code></pre></div>
+<ul>
+<li><strong>镜像启动命令必须支持标准参数格式</strong>，如：<code>--param1=value1 --param2=value2 ...</code>，便于平台通过命令行方式传递运行参数；</li>
+</ul>
+<p>命令行参数解析示例：</p>
+<div class="highlight"><pre><span></span><code>```python
+import argparse
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input_file", required=True, type=str, help="输入文件路径")
+    args = parser.parse_args()
+    print(f"输入文件路径:{args.input_file}")
+```
+</code></pre></div>
+<ul>
+<li>
+<p><strong>说明文档必须使用 Markdown 格式编写 <code>README.md</code></strong>，内容需包含模块功能简介、输入输出说明、使用示例、运行依赖等信息，方便他人理解与复用。</p>
+</li>
+<li>
+<p><strong>可引用的环境变量，这些环境变量由AIHUB平台自动注入到模块中，可以在模块的代码中读取。</strong></p>
+</li>
+<li>
+<p>AI_HUB_USER_ID，当前运行的用户的ID。</p>
+</li>
+<li>
+<p>AI_HUB_TOKEN，当前运行的用户的Token，可用于API调用。</p>
+</li>
+<li>
+<p>AI_HUB_WORKFLOW_RUN_ID，当前运行实例的ID。</p>
+</li>
+</ul>
+<h4 id="_30">模块发布流程</h4>
+<ol>
+<li>
+<p><strong>开发提交</strong>
+   模块开发者需在指定的 GitLab Group（http://192.168.99.198/aihub-modules/）的部门子group 下创建模块仓库，上传代码。</p>
+</li>
+<li>
+<p><strong>创建模块</strong>
+   在平台“模块管理”界面中，注册新模块，填写相关参数。提交信息后平台将自动构建镜像。镜像构建成功的模块对创建人可见，对其他用户暂不可见。创建人可在创建工作流 - 添加模块 -“我的”分类中引用使用。</p>
+</li>
+<li>
+<p><strong>审核发布</strong>
+   模块注册后需通过审核才能进入平台公共模块仓库，供全体用户共享使用。</p>
+</li>
+</ol>
+<p>所有研发同事都已分配审核权限，由各组leader统筹本组模块审核，可自行审核或同组同事交叉审核，
+   审核人需对提交的模块代码进行审核把关，确保模块：</p>
+<ul>
+<li>
+<p>功能准确、文档完整；</p>
+</li>
+<li>
+<p>输入输出规范、可复用性强。</p>
+</li>
+</ul>
+<p>审核通过后，模块变为已发布状态，全体用户可在工作流中自由引用使用。</p>
+<h4 id="_31">模块调试指引</h4>
+<h5 id="_32">代码调试</h5>
+<p>调试代码是否能正常运行，检查代码执行的结果是否正确。</p>
+<ol>
+<li>
+<p>本地调试</p>
+<ol>
+<li>在本地办公电脑安装python运行环境，直接运行Python脚本进行调试。</li>
+</ol>
+</li>
+<li>
+<p>模型训练调试</p>
+<ol>
+<li>
+<p>启动模型训练任务，挂载华为盘，运行命令填写 <code>sleep 1h</code>，开启ssh登录，需要注意的是镜像需要提前安装好openssh-client和openssh-server。</p>
+</li>
+<li>
+<p>在模型训练列表页展开训练任务的POD列表，点击POD名称进入POD详情页，根据SSH信息进行登录。</p>
+</li>
+<li>
+<p>cd 到代码目录，运行代码进行调试。</p>
+</li>
+</ol>
+</li>
+<li>
+<p>docker run调试</p>
+<ol>
+<li>
+<p>把代码放到华为盘上，例如：/nfs/hw-data/ms/AIED/lanyiyou/my-module</p>
+</li>
+<li>
+<p>登录到服务器，用docker run的方式进行调试。</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span>/nfs/hw-data/ms/AIED/lanyiyou/my-module:/app<span class="w"> </span>-w<span class="w"> </span>/app<span class="w"> </span>--entrypoint<span class="o">=</span>/bin/bash<span class="w"> </span>nvidia/cuda:11.7.1-cudnn8-devel-ubuntu20.04
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>python<span class="w"> </span>main.py<span class="w"> </span>--input_file<span class="o">=</span>test.txt
+</code></pre></div>
+</li>
+</ol>
+<h5 id="_33">模块调试</h5>
+<p>检查Dockerfile是否正确，代码能否在镜像中正常运行。</p>
+<ol>
+<li>
+<p><strong>提交代码</strong><br>按照上述模块开发要求，把代码提交到git。</p>
+</li>
+<li>
+<p><strong>构建镜像</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>clone<span class="w"> </span>http://192.168.99.198/aihub-modules/aied/my_module.git<span class="w"> </span><span class="c1">### 拉取模块代码</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">cd</span><span class="w"> </span>my_module<span class="w"> </span><span class="c1">### 进入项目目录</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span><span class="m">192</span>.168.99.199:8080/aied/workflow_modules/my_module:1.0<span class="w"> </span>.<span class="w"> </span><span class="c1">### 构建镜像</span>
+</code></pre></div>
+</li>
+</ol>
+<p>需要注意的是，镜像的构建目录跟Dockerfile的写法有关，主要跟COPY命令的源文件所在的目录有关。</p>
+<ol>
+<li><strong>运行镜像</strong></li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-p<span class="w"> </span><span class="nv">$PWD</span>/output:/tmp/workflow_space<span class="w"> </span><span class="m">192</span>.168.99.199:8080/aied/workflow_modules/my_module:1.0<span class="w"> </span>--input_file<span class="o">=</span>test.txt
+</code></pre></div>
+<p>根据运行时打印的日志和output下输出的文件，检查结果是否正确。</p>
+<h2 id="parameter-passing">参数传递匹配和类型说明</h2>
+<p>在工作流中，参数分为以下三类，每类参数在使用时有不同的定义方式与传递机制：</p>
+<ol>
+<li>
+<p><strong>初始输入参数</strong></p>
+</li>
+<li>
+<p><strong>定义位置</strong>：工作流创建时定义。</p>
+</li>
+<li>
+<p><strong>填写位置</strong>：运行实例创建时填写具体值。</p>
+</li>
+<li>
+<p><strong>用途</strong>：为整个工作流提供初始数据输入，可被所有节点引用。</p>
+</li>
+<li>
+<p><strong>类型</strong>：</p>
+<ul>
+<li>
+<p><code>文本</code>：普通文本类型；</p>
+</li>
+<li>
+<p><code>数据集</code>： AIHub数据集管理的数据集资源， 实际传给工作流节点是数据集ID，需要节点自行解析访问资源。</p>
+</li>
+<li>
+<p><code>模型</code>： AIHub模型管理的模型资源， 实际传给工作流节点是模型ID，需要节点自行解析访问资源。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>节点输入参数</strong></p>
+</li>
+<li>
+<p><strong>定义位置</strong>：每个节点创建时定义，模块节点在模块创建时定义。</p>
+</li>
+<li>
+<p><strong>取值来源</strong>：</p>
+<ul>
+<li>
+<p>工作流的初始输入参数；</p>
+</li>
+<li>
+<p>父节点或祖先节点的输出参数。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>引用方式</strong>：在节点执行命令中，通过 <code>$param_name</code> 的形式引用参数或路径值。</p>
+</li>
+<li>
+<p><strong>节点输出参数</strong></p>
+</li>
+<li>
+<p><strong>定义位置</strong>：每个节点创建时定义，用于将当前节点的结果传递给子节点或后续节点，模块节点在模块创建时定义。</p>
+</li>
+<li>
+<p><strong>属性说明</strong>：</p>
+</li>
+<li>
+<p><strong>参数名称</strong>：自定义的输出变量名。</p>
+</li>
+<li>
+<p><strong>参数类型</strong>：</p>
+<ul>
+<li>
+<p><code>普通文本</code>：表示输出结果是简单类型的内容，比如数字、布尔值、文本；当内容长度较短时（少于1000字符），可以选择这个类型；</p>
+</li>
+<li>
+<p><code>文件路径</code>：表示输出结果是一个文件或目录，需跨节点传递文件实体；当内容类型为二进制，或者内容长度比较长的时候，必须选择这个类型。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>输出路径</strong>：</p>
+<ul>
+<li>
+<p>若参数类型为<code>普通文本</code>，系统会读取该路径对应文件中的文本内容，作为参数值传递给下游节点</p>
+</li>
+<li>
+<p>若参数类型为<code>文件路径</code>，系统会将指定路径下的文件或目录打包上传，并在引用该参数的下游节点中自动下载并解压至运行环境，最终将解压后的路径作为参数传入供访问使用。</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>参数匹配示例说明</strong><br></p>
+<video controls width="100%" height="auto">
+    <source src="files/参数传递说明.mp4" type="video/mp4">
+    参数传递说明.mp4
+</video>
+<p><strong>参数类型说明</strong></p>
+<ol>
+<li>
+<p>对于如图所示工作流：<br><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-30.png"></a></p>
+</li>
+<li>
+<p>step1的输出参数和执行命令如下：<a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-37.png"></a><br></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"outpraram1"</span><span class="w"> </span>&gt;<span class="w">  </span>/tmp/outpraram1.txt
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"outpraram2"</span><span class="w"> </span>&gt;<span class="w">  </span>/tmp/outpraram2.txt
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>mkdir<span class="w"> </span>/tmp/outpraram3
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>touch<span class="w"> </span>/tmp/outpraram3/file1
+</code></pre></div>
+</li>
+<li>
+<p>step2的输入参数和执行命令如下：</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="images/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86/image-38.png"></a></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">echo</span><span class="w"> </span><span class="nv">$step1param1</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nb">echo</span><span class="w"> </span><span class="nv">$step1param2</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nb">echo</span><span class="w"> </span><span class="nv">$step1param3</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>cat<span class="w"> </span><span class="nv">$step1param2</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>ls<span class="w"> </span><span class="nv">$step1param3</span>
+</code></pre></div>
+</li>
+<li>
+<p>运行后，step2日志输出如下：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="l l-Scalar l-Scalar-Plain">outpraram1</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="l l-Scalar l-Scalar-Plain">/tmp/outpraram2.txt</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="l l-Scalar l-Scalar-Plain">/tmp/outpraram3</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="l l-Scalar l-Scalar-Plain">outpraram2</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="l l-Scalar l-Scalar-Plain">file1</span>
+</code></pre></div>
+</li>
+</ol>
+<p>可以看到：</p>
+<p> <strong>普通文本类型输出参数</strong></p>
+<ul>
+<li>
+<p>示例：<code>output_param1</code>（/tmp/outparam1.txt）</p>
+</li>
+<li>
+<p>在下游节点中，输入参数 <code>step1param1</code> 直接接收到其文本内容：<code>outparam1</code>。</p>
+</li>
+</ul>
+<p><strong>文件路径类型输出参数（单个文件）</strong></p>
+<ul>
+<li>
+<p>示例：<code>output_param2</code>（/tmp/outparam2.txt）</p>
+</li>
+<li>
+<p>在下游节点中，输入参数 <code>step1param2</code> 接收到的是该文件的路径，通过 <code>cat</code> 可读取文件内容：<code>outparam2</code>。</p>
+</li>
+</ul>
+<p><strong>文件路径类型输出参数（目录）</strong></p>
+<ul>
+<li>
+<p>示例：<code>output_param3</code>（/tmp/outparam3）</p>
+</li>
+<li>
+<p>在下游节点中，输入参数 <code>step1param3</code> 接收到的是该目录路径，通过 <code>ls</code> 可访问其中所有文件，如 <code>file1</code>。</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.images.zoom"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">document.querySelectorAll('.glightbox').forEach(function(element) {
+    try {
+        var img = element.querySelector('img');
+        if (img && img.src) {
+            element.setAttribute('href', img.src);
+        } else {
+            console.log('No img element with src attribute found');
+        }
+    } catch (error) {
+        console.log('Error:', error);
+    }
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

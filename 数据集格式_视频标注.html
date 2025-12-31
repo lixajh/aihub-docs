@@ -1,0 +1,2928 @@
+<!DOCTYPE html><html lang="zh" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lixajh.github.io/docs/%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%BC%E5%BC%8F_%E8%A7%86%E9%A2%91%E6%A0%87%E6%B3%A8.html">
+      
+      
+        <link rel="prev" href="%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%BC%E5%BC%8F_IF_DATA.html">
+      
+      
+        <link rel="next" href="%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%BC%E5%BC%8F_%E6%A1%A3%E6%A1%88%E6%B8%85%E6%B4%97%E5%90%88%E5%B9%B6.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>视频标注 - AiHub 使用手册</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="iframe-worker.js"></script>
+      
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#labelfree-video-single-json" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="index.html" title="AiHub 使用手册" class="md-header__button md-logo" aria-label="AiHub 使用手册" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AiHub 使用手册
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              视频标注
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="AiHub 使用手册" class="md-nav__button md-logo" aria-label="AiHub 使用手册" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    AiHub 使用手册
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    产品简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速入门
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    快速入门
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E7%99%BB%E5%BD%95%E6%B3%A8%E5%86%8C.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    登录注册
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E7%AE%97%E6%B3%95%E4%BA%BA%E5%91%98%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    标注任务：从发起到验收
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%A0%87%E6%B3%A8%E4%BA%BA%E5%91%98%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    标注任务：从接收到交付
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E4%BB%BB%E5%8A%A1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型训练：创建与监控
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-%E5%88%9B%E5%BB%BA%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%BB%BB%E5%8A%A1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工作流：创建、运行与监控
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8-%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%9E%8B%E8%AF%84%E6%B5%8B%E4%BB%BB%E5%8A%A1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型评测：创建与查看结果
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    操作指南
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    操作指南
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Dashboard.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2">
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    任务中心
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    任务中心
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    任务管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%B7%A5%E6%97%B6%E7%AE%A1%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工时管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E6%A0%87%E6%B3%A8%E4%BB%BB%E5%8A%A1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据标注任务
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E6%8E%A5%E5%85%A5%E4%BB%BB%E5%8A%A1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据接入任务
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%A4%96%E7%BD%91%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%E4%BB%BB%E5%8A%A1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    外网数据下载任务
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%96%87%E6%A1%A3%E4%B8%AD%E5%BF%83.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    文档中心
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据仓库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E9%9B%86%E7%AE%A1%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据集管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据标注
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数据标注
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%A0%87%E6%B3%A8%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    标注项目管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_2" id="__nav_3_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据集格式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数据集格式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%BC%E5%BC%8F_COCO.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    COCO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%BC%E5%BC%8F_VOC.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VOC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%BC%E5%BC%8F_IF_DATA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IF_DATA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    视频标注
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%BC%E5%BC%8F_%E8%A7%86%E9%A2%91%E6%A0%87%E6%B3%A8.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    视频标注
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#labelfree-video-single-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LabelFree Video (single json)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LabelFree Video (single json)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        目录结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        json格式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#labelfree-video-multi-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LabelFree Video (multi json)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LabelFree Video (multi json)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        目录结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        json格式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ae-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AE Video
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AE Video">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        目录结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        json格式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E9%9B%86%E6%A0%BC%E5%BC%8F_%E6%A1%A3%E6%A1%88%E6%B8%85%E6%B4%97%E5%90%88%E5%B9%B6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    档案清洗合并
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_3" id="__nav_3_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据标注
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数据标注
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    目标检测
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图像分类
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E8%A7%86%E9%A2%91%E5%88%86%E7%B1%BB.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    视频分类
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E8%A7%86%E9%A2%91%E6%A0%87%E6%B3%A8.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    视频标注
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%A1%A3%E6%A1%88%E6%B8%85%E6%B4%97%E5%90%88%E5%B9%B6.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    档案清洗合并
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%AF%B4%E6%98%8E.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快捷键说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BA.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据导出
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_5">
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_5" id="__nav_3_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    标注质量管理
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    标注质量管理
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E9%9B%86%E5%8F%AF%E8%A7%86%E5%8C%96.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据集可视化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E4%B8%80%E8%87%B4%E6%80%A7%E6%B5%8B%E8%AF%95.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    一致性测试
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%A3%80.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据质检
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E9%97%AE%E9%A2%98%E4%B8%AD%E5%BF%83.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    问题中心
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%A0%87%E6%B3%A8%E5%9B%A2%E9%98%9F%E7%AE%A1%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    标注团队管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E7%BB%A9%E6%95%88%E7%AE%A1%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    绩效管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    镜像管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%AE%A1%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工作流管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型训练
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10">
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型中心
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    模型中心
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="models/%E6%A8%A1%E5%9E%8B%E7%AE%A1%E7%90%86.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型管理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="models/%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型部署
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%88%91%E7%9A%84notebook.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    我的应用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_12">
+        
+          
+          <label class="md-nav__link" for="__nav_3_12" id="__nav_3_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型评测
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    模型评测
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%A8%A1%E5%9E%8B%E8%AF%84%E6%B5%8B.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模型评测
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%80%A7%E8%83%BD%E8%AF%84%E6%B5%8B.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    性能评测
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E8%AF%84%E6%B5%8B%E6%A6%9C%E5%8D%95.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    精度评测榜单
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E6%80%A7%E8%83%BD%E8%AF%84%E6%B5%8B%E6%A6%9C%E5%8D%95.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    性能评测榜单
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开发参考
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    开发参考
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="API%E6%96%87%E6%A1%A3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API文档
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/aihub_sdk_docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDK文档
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#labelfree-video-single-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LabelFree Video (single json)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LabelFree Video (single json)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        目录结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        json格式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#labelfree-video-multi-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LabelFree Video (multi json)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LabelFree Video (multi json)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        目录结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        json格式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ae-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AE Video
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AE Video">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        目录结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        json格式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>视频标注</h1>
+
+<blockquote>
+<p>视频格式支持mp4, avi, mov, wmv, flv, mkv, webm, m4v, 3gp, mpeg, mpg, rmvb, ts, h264</p>
+</blockquote>
+<h2 id="labelfree-video-single-json">LabelFree Video (single json)</h2>
+<h3 id="_1">目录结构</h3>
+<p>多个视频对应一个json文件</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="mi">-</span><span class="w"> </span><span class="err">videos</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="mi">-</span><span class="w"> </span><span class="mf">1.</span><span class="err">mp</span><span class="mi">4</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="mi">-</span><span class="w"> </span><span class="mf">2.</span><span class="err">mp</span><span class="mi">4</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="mi">-</span><span class="w"> </span><span class="err">a</span><span class="kc">nn</span><span class="err">o</span><span class="kc">tat</span><span class="err">io</span><span class="kc">ns</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="mi">-</span><span class="w"> </span><span class="err">resul</span><span class="kc">t</span><span class="err">.jso</span><span class="kc">n</span>
+</code></pre></div>
+<h3 id="json">json格式</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">[</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="o">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="s2">"id"</span>:<span class="w"> </span><span class="m">4593</span>,
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="s2">"file_upload"</span>:<span class="w"> </span><span class="s2">"person2_1920_1080_24fps.mp4"</span>,
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="s2">"data"</span>:<span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">            </span><span class="s2">"video"</span>:<span class="w"> </span><span class="s2">"http://192.168.12.137:9000/asiatrip/1258/raw_data/videos/person2_1920_1080_24fps.mp4"</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="o">}</span>,
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="s2">"width"</span>:<span class="w"> </span><span class="m">1920</span>,<span class="w">  </span><span class="c1">## 视频宽</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="s2">"height"</span>:<span class="w"> </span><span class="m">1080</span>,<span class="w">  </span><span class="c1">## 视频高</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="s2">"annotations"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">            </span><span class="o">{</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">                </span><span class="s2">"completed_by"</span>:<span class="w"> </span><span class="s2">"liu.zongze@intellif.com"</span>,
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">                </span><span class="s2">"result"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">                    </span><span class="o">{</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">                        </span><span class="s2">"from_name"</span>:<span class="w"> </span><span class="s2">"box"</span>,
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">                        </span><span class="s2">"to_name"</span>:<span class="w"> </span><span class="s2">"video"</span>,
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">                        </span><span class="s2">"id"</span>:<span class="w"> </span><span class="s2">"0bf4f9f2-1af3-41cf-9945-31ede43abf5d"</span>,
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">                        </span><span class="s2">"track_id"</span>:<span class="w"> </span><span class="s2">"12"</span>,<span class="w">  </span><span class="c1">## 轨迹id,相同的id表示同一个目标</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">                        </span><span class="s2">"type"</span>:<span class="w"> </span><span class="s2">"videorectangle"</span>,
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">                        </span><span class="s2">"origin"</span>:<span class="w"> </span><span class="s2">"manual"</span>,
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">                        </span><span class="s2">"value"</span>:<span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">                            </span><span class="s2">"framesCount"</span>:<span class="w"> </span><span class="m">464</span>,
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">                            </span><span class="s2">"duration"</span>:<span class="w"> </span><span class="m">19</span>.333332,<span class="w">  </span><span class="c1">## 单位s</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">                            </span><span class="s2">"labels"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">                                </span><span class="s2">"人"</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">                            </span><span class="o">]</span>,
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">                            </span><span class="s2">"sequence"</span>:<span class="w"> </span><span class="o">[</span><span class="w">  </span><span class="c1">## 时间线(轨迹)</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">                                </span><span class="o">{</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">                                    </span><span class="s2">"frame"</span>:<span class="w"> </span><span class="m">0</span>,<span class="w">  </span><span class="c1">## 帧序号</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">                                    </span><span class="s2">"enabled"</span>:<span class="w"> </span>true,<span class="w">  </span><span class="c1">## 目标在视频中为true,消失为False</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">                                    </span><span class="s2">"time"</span>:<span class="w"> </span><span class="m">0</span>.041666,<span class="w">  </span><span class="c1">## 帧对应的视频时间</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">                                    </span><span class="s2">"is_reflected"</span>:<span class="w"> </span>false,
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">                                    </span><span class="s2">"rotation"</span>:<span class="w"> </span><span class="m">0</span>,
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">                                    </span><span class="s2">"x"</span>:<span class="w"> </span><span class="m">26</span>.07296137339056,<span class="w">  </span><span class="c1">## 框的x坐标与视频宽的百分比</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">                                    </span><span class="s2">"y"</span>:<span class="w"> </span><span class="m">44</span>.754411063423944,<span class="w">  </span><span class="c1">## 框的y坐标与视频高的百分比</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">                                    </span><span class="s2">"width"</span>:<span class="w"> </span><span class="m">11</span>.802575107296141,<span class="w">  </span><span class="c1">## 框的宽与视频宽的百分比</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">                                    </span><span class="s2">"height"</span>:<span class="w"> </span><span class="m">55</span>.12637100619933<span class="w">  </span><span class="c1">## 框的高与视频高的百分比,</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">                                    </span><span class="s2">"label"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">                                        </span><span class="o">{</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"人"</span>,
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">                                            </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">                                                </span><span class="o">{</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">                                                    </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"性别"</span>,
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">                                                    </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">                                                        </span><span class="o">{</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">                                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"女"</span>
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">                                                        </span><span class="o">}</span>
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="w">                                                    </span><span class="o">]</span>
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="w">                                                </span><span class="o">}</span>
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="w">                                            </span><span class="o">]</span>
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="w">                                        </span><span class="o">}</span>
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="w">                                    </span><span class="o">]</span>
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="w">                                </span><span class="o">}</span>,
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="w">                                </span><span class="o">{</span>
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="w">                                    </span><span class="s2">"frame"</span>:<span class="w"> </span><span class="m">22</span>,
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="w">                                    </span><span class="s2">"enabled"</span>:<span class="w"> </span>true,
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="w">                                    </span><span class="s2">"time"</span>:<span class="w"> </span><span class="m">0</span>.958333,
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="w">                                    </span><span class="s2">"is_reflected"</span>:<span class="w"> </span>false,
+<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a><span class="w">                                    </span><span class="s2">"rotation"</span>:<span class="w"> </span><span class="m">0</span>,
+<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="w">                                    </span><span class="s2">"x"</span>:<span class="w"> </span><span class="m">27</span>.03862660944207,
+<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="w">                                    </span><span class="s2">"y"</span>:<span class="w"> </span><span class="m">44</span>.754411063423916,
+<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a><span class="w">                                    </span><span class="s2">"width"</span>:<span class="w"> </span><span class="m">10</span>.836909871244616,
+<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a><span class="w">                                    </span><span class="s2">"height"</span>:<span class="w"> </span><span class="m">55</span>.12637100619933,
+<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a><span class="w">                                    </span><span class="s2">"label"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a><span class="w">                                        </span><span class="o">{</span>
+<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a><span class="w">                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"人"</span>,
+<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a><span class="w">                                            </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a><span class="w">                                                </span><span class="o">{</span>
+<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a><span class="w">                                                    </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"性别"</span>,
+<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a><span class="w">                                                    </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a><span class="w">                                                        </span><span class="o">{</span>
+<a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a><span class="w">                                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"女"</span>
+<a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a><span class="w">                                                        </span><span class="o">}</span>
+<a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a><span class="w">                                                    </span><span class="o">]</span>
+<a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a><span class="w">                                                </span><span class="o">}</span>
+<a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a><span class="w">                                            </span><span class="o">]</span>
+<a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a><span class="w">                                        </span><span class="o">}</span>
+<a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a><span class="w">                                    </span><span class="o">]</span>
+<a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a><span class="w">                                </span><span class="o">}</span>,
+<a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a><span class="w">                                </span><span class="o">{</span>
+<a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a><span class="w">                                    </span><span class="s2">"frame"</span>:<span class="w"> </span><span class="m">30</span>,
+<a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a><span class="w">                                    </span><span class="s2">"enabled"</span>:<span class="w"> </span>true,
+<a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a><span class="w">                                    </span><span class="s2">"time"</span>:<span class="w"> </span><span class="m">1</span>.291666,
+<a id="__codelineno-1-84" name="__codelineno-1-84" href="#__codelineno-1-84"></a><span class="w">                                    </span><span class="s2">"is_reflected"</span>:<span class="w"> </span>false,
+<a id="__codelineno-1-85" name="__codelineno-1-85" href="#__codelineno-1-85"></a><span class="w">                                    </span><span class="s2">"rotation"</span>:<span class="w"> </span><span class="m">0</span>,
+<a id="__codelineno-1-86" name="__codelineno-1-86" href="#__codelineno-1-86"></a><span class="w">                                    </span><span class="s2">"x"</span>:<span class="w"> </span><span class="m">27</span>.038626609442076,
+<a id="__codelineno-1-87" name="__codelineno-1-87" href="#__codelineno-1-87"></a><span class="w">                                    </span><span class="s2">"y"</span>:<span class="w"> </span><span class="m">45</span>.898903195040525,
+<a id="__codelineno-1-88" name="__codelineno-1-88" href="#__codelineno-1-88"></a><span class="w">                                    </span><span class="s2">"width"</span>:<span class="w"> </span><span class="m">10</span>.836909871244611,
+<a id="__codelineno-1-89" name="__codelineno-1-89" href="#__codelineno-1-89"></a><span class="w">                                    </span><span class="s2">"height"</span>:<span class="w"> </span><span class="m">53</span>.981878874582726,
+<a id="__codelineno-1-90" name="__codelineno-1-90" href="#__codelineno-1-90"></a><span class="w">                                    </span><span class="s2">"label"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-91" name="__codelineno-1-91" href="#__codelineno-1-91"></a><span class="w">                                        </span><span class="o">{</span>
+<a id="__codelineno-1-92" name="__codelineno-1-92" href="#__codelineno-1-92"></a><span class="w">                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"人"</span>,
+<a id="__codelineno-1-93" name="__codelineno-1-93" href="#__codelineno-1-93"></a><span class="w">                                            </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-94" name="__codelineno-1-94" href="#__codelineno-1-94"></a><span class="w">                                                </span><span class="o">{</span>
+<a id="__codelineno-1-95" name="__codelineno-1-95" href="#__codelineno-1-95"></a><span class="w">                                                    </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"性别"</span>,
+<a id="__codelineno-1-96" name="__codelineno-1-96" href="#__codelineno-1-96"></a><span class="w">                                                    </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-97" name="__codelineno-1-97" href="#__codelineno-1-97"></a><span class="w">                                                        </span><span class="o">{</span>
+<a id="__codelineno-1-98" name="__codelineno-1-98" href="#__codelineno-1-98"></a><span class="w">                                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"女"</span>
+<a id="__codelineno-1-99" name="__codelineno-1-99" href="#__codelineno-1-99"></a><span class="w">                                                        </span><span class="o">}</span>
+<a id="__codelineno-1-100" name="__codelineno-1-100" href="#__codelineno-1-100"></a><span class="w">                                                    </span><span class="o">]</span>
+<a id="__codelineno-1-101" name="__codelineno-1-101" href="#__codelineno-1-101"></a><span class="w">                                                </span><span class="o">}</span>
+<a id="__codelineno-1-102" name="__codelineno-1-102" href="#__codelineno-1-102"></a><span class="w">                                            </span><span class="o">]</span>
+<a id="__codelineno-1-103" name="__codelineno-1-103" href="#__codelineno-1-103"></a><span class="w">                                        </span><span class="o">}</span>
+<a id="__codelineno-1-104" name="__codelineno-1-104" href="#__codelineno-1-104"></a><span class="w">                                    </span><span class="o">]</span>
+<a id="__codelineno-1-105" name="__codelineno-1-105" href="#__codelineno-1-105"></a><span class="w">                                </span><span class="o">}</span>,
+<a id="__codelineno-1-106" name="__codelineno-1-106" href="#__codelineno-1-106"></a><span class="w">                                </span><span class="o">{</span>
+<a id="__codelineno-1-107" name="__codelineno-1-107" href="#__codelineno-1-107"></a><span class="w">                                    </span><span class="s2">"frame"</span>:<span class="w"> </span><span class="m">38</span>,
+<a id="__codelineno-1-108" name="__codelineno-1-108" href="#__codelineno-1-108"></a><span class="w">                                    </span><span class="s2">"enabled"</span>:<span class="w"> </span>true,
+<a id="__codelineno-1-109" name="__codelineno-1-109" href="#__codelineno-1-109"></a><span class="w">                                    </span><span class="s2">"time"</span>:<span class="w"> </span><span class="m">1</span>.625,
+<a id="__codelineno-1-110" name="__codelineno-1-110" href="#__codelineno-1-110"></a><span class="w">                                    </span><span class="s2">"is_reflected"</span>:<span class="w"> </span>false,
+<a id="__codelineno-1-111" name="__codelineno-1-111" href="#__codelineno-1-111"></a><span class="w">                                    </span><span class="s2">"rotation"</span>:<span class="w"> </span><span class="m">0</span>,
+<a id="__codelineno-1-112" name="__codelineno-1-112" href="#__codelineno-1-112"></a><span class="w">                                    </span><span class="s2">"x"</span>:<span class="w"> </span><span class="m">27</span>.03862660944208,
+<a id="__codelineno-1-113" name="__codelineno-1-113" href="#__codelineno-1-113"></a><span class="w">                                    </span><span class="s2">"y"</span>:<span class="w"> </span><span class="m">46</span>.852646638054345,
+<a id="__codelineno-1-114" name="__codelineno-1-114" href="#__codelineno-1-114"></a><span class="w">                                    </span><span class="s2">"width"</span>:<span class="w"> </span><span class="m">10</span>.836909871244616,
+<a id="__codelineno-1-115" name="__codelineno-1-115" href="#__codelineno-1-115"></a><span class="w">                                    </span><span class="s2">"height"</span>:<span class="w"> </span><span class="m">53</span>.02813543156888,
+<a id="__codelineno-1-116" name="__codelineno-1-116" href="#__codelineno-1-116"></a><span class="w">                                    </span><span class="s2">"label"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-117" name="__codelineno-1-117" href="#__codelineno-1-117"></a><span class="w">                                        </span><span class="o">{</span>
+<a id="__codelineno-1-118" name="__codelineno-1-118" href="#__codelineno-1-118"></a><span class="w">                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"人"</span>,
+<a id="__codelineno-1-119" name="__codelineno-1-119" href="#__codelineno-1-119"></a><span class="w">                                            </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-120" name="__codelineno-1-120" href="#__codelineno-1-120"></a><span class="w">                                                </span><span class="o">{</span>
+<a id="__codelineno-1-121" name="__codelineno-1-121" href="#__codelineno-1-121"></a><span class="w">                                                    </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"性别"</span>,
+<a id="__codelineno-1-122" name="__codelineno-1-122" href="#__codelineno-1-122"></a><span class="w">                                                    </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-123" name="__codelineno-1-123" href="#__codelineno-1-123"></a><span class="w">                                                        </span><span class="o">{</span>
+<a id="__codelineno-1-124" name="__codelineno-1-124" href="#__codelineno-1-124"></a><span class="w">                                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"女"</span>
+<a id="__codelineno-1-125" name="__codelineno-1-125" href="#__codelineno-1-125"></a><span class="w">                                                        </span><span class="o">}</span>
+<a id="__codelineno-1-126" name="__codelineno-1-126" href="#__codelineno-1-126"></a><span class="w">                                                    </span><span class="o">]</span>
+<a id="__codelineno-1-127" name="__codelineno-1-127" href="#__codelineno-1-127"></a><span class="w">                                                </span><span class="o">}</span>
+<a id="__codelineno-1-128" name="__codelineno-1-128" href="#__codelineno-1-128"></a><span class="w">                                            </span><span class="o">]</span>
+<a id="__codelineno-1-129" name="__codelineno-1-129" href="#__codelineno-1-129"></a><span class="w">                                        </span><span class="o">}</span>
+<a id="__codelineno-1-130" name="__codelineno-1-130" href="#__codelineno-1-130"></a><span class="w">                                    </span><span class="o">]</span>
+<a id="__codelineno-1-131" name="__codelineno-1-131" href="#__codelineno-1-131"></a><span class="w">                                </span><span class="o">}</span>,
+<a id="__codelineno-1-132" name="__codelineno-1-132" href="#__codelineno-1-132"></a><span class="w">                                </span><span class="o">{</span>
+<a id="__codelineno-1-133" name="__codelineno-1-133" href="#__codelineno-1-133"></a><span class="w">                                    </span><span class="s2">"frame"</span>:<span class="w"> </span><span class="m">47</span>,
+<a id="__codelineno-1-134" name="__codelineno-1-134" href="#__codelineno-1-134"></a><span class="w">                                    </span><span class="s2">"enabled"</span>:<span class="w"> </span>true,
+<a id="__codelineno-1-135" name="__codelineno-1-135" href="#__codelineno-1-135"></a><span class="w">                                    </span><span class="s2">"time"</span>:<span class="w"> </span><span class="m">2</span>.0,
+<a id="__codelineno-1-136" name="__codelineno-1-136" href="#__codelineno-1-136"></a><span class="w">                                    </span><span class="s2">"is_reflected"</span>:<span class="w"> </span>false,
+<a id="__codelineno-1-137" name="__codelineno-1-137" href="#__codelineno-1-137"></a><span class="w">                                    </span><span class="s2">"rotation"</span>:<span class="w"> </span><span class="m">0</span>,
+<a id="__codelineno-1-138" name="__codelineno-1-138" href="#__codelineno-1-138"></a><span class="w">                                    </span><span class="s2">"x"</span>:<span class="w"> </span><span class="m">28</span>.11158798283265,
+<a id="__codelineno-1-139" name="__codelineno-1-139" href="#__codelineno-1-139"></a><span class="w">                                    </span><span class="s2">"y"</span>:<span class="w"> </span><span class="m">46</span>.08965188364326,
+<a id="__codelineno-1-140" name="__codelineno-1-140" href="#__codelineno-1-140"></a><span class="w">                                    </span><span class="s2">"width"</span>:<span class="w"> </span><span class="m">9</span>.871244635193115,
+<a id="__codelineno-1-141" name="__codelineno-1-141" href="#__codelineno-1-141"></a><span class="w">                                    </span><span class="s2">"height"</span>:<span class="w"> </span><span class="m">53</span>.79113018597997,
+<a id="__codelineno-1-142" name="__codelineno-1-142" href="#__codelineno-1-142"></a><span class="w">                                    </span><span class="s2">"label"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-143" name="__codelineno-1-143" href="#__codelineno-1-143"></a><span class="w">                                        </span><span class="o">{</span>
+<a id="__codelineno-1-144" name="__codelineno-1-144" href="#__codelineno-1-144"></a><span class="w">                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"人"</span>,
+<a id="__codelineno-1-145" name="__codelineno-1-145" href="#__codelineno-1-145"></a><span class="w">                                            </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-146" name="__codelineno-1-146" href="#__codelineno-1-146"></a><span class="w">                                                </span><span class="o">{</span>
+<a id="__codelineno-1-147" name="__codelineno-1-147" href="#__codelineno-1-147"></a><span class="w">                                                    </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"性别"</span>,
+<a id="__codelineno-1-148" name="__codelineno-1-148" href="#__codelineno-1-148"></a><span class="w">                                                    </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-149" name="__codelineno-1-149" href="#__codelineno-1-149"></a><span class="w">                                                        </span><span class="o">{</span>
+<a id="__codelineno-1-150" name="__codelineno-1-150" href="#__codelineno-1-150"></a><span class="w">                                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"女"</span>
+<a id="__codelineno-1-151" name="__codelineno-1-151" href="#__codelineno-1-151"></a><span class="w">                                                        </span><span class="o">}</span>
+<a id="__codelineno-1-152" name="__codelineno-1-152" href="#__codelineno-1-152"></a><span class="w">                                                    </span><span class="o">]</span>
+<a id="__codelineno-1-153" name="__codelineno-1-153" href="#__codelineno-1-153"></a><span class="w">                                                </span><span class="o">}</span>
+<a id="__codelineno-1-154" name="__codelineno-1-154" href="#__codelineno-1-154"></a><span class="w">                                            </span><span class="o">]</span>
+<a id="__codelineno-1-155" name="__codelineno-1-155" href="#__codelineno-1-155"></a><span class="w">                                        </span><span class="o">}</span>
+<a id="__codelineno-1-156" name="__codelineno-1-156" href="#__codelineno-1-156"></a><span class="w">                                    </span><span class="o">]</span>
+<a id="__codelineno-1-157" name="__codelineno-1-157" href="#__codelineno-1-157"></a><span class="w">                                </span><span class="o">}</span>,
+<a id="__codelineno-1-158" name="__codelineno-1-158" href="#__codelineno-1-158"></a><span class="w">                                </span><span class="o">{</span>
+<a id="__codelineno-1-159" name="__codelineno-1-159" href="#__codelineno-1-159"></a><span class="w">                                    </span><span class="s2">"frame"</span>:<span class="w"> </span><span class="m">65</span>,
+<a id="__codelineno-1-160" name="__codelineno-1-160" href="#__codelineno-1-160"></a><span class="w">                                    </span><span class="s2">"enabled"</span>:<span class="w"> </span>true,
+<a id="__codelineno-1-161" name="__codelineno-1-161" href="#__codelineno-1-161"></a><span class="w">                                    </span><span class="s2">"time"</span>:<span class="w"> </span><span class="m">2</span>.75,
+<a id="__codelineno-1-162" name="__codelineno-1-162" href="#__codelineno-1-162"></a><span class="w">                                    </span><span class="s2">"is_reflected"</span>:<span class="w"> </span>false,
+<a id="__codelineno-1-163" name="__codelineno-1-163" href="#__codelineno-1-163"></a><span class="w">                                    </span><span class="s2">"rotation"</span>:<span class="w"> </span><span class="m">0</span>,
+<a id="__codelineno-1-164" name="__codelineno-1-164" href="#__codelineno-1-164"></a><span class="w">                                    </span><span class="s2">"x"</span>:<span class="w"> </span><span class="m">26</span>.60313052259533,
+<a id="__codelineno-1-165" name="__codelineno-1-165" href="#__codelineno-1-165"></a><span class="w">                                    </span><span class="s2">"y"</span>:<span class="w"> </span><span class="m">46</span>.08965188364326,
+<a id="__codelineno-1-166" name="__codelineno-1-166" href="#__codelineno-1-166"></a><span class="w">                                    </span><span class="s2">"width"</span>:<span class="w"> </span><span class="m">11</span>.3797020954304,
+<a id="__codelineno-1-167" name="__codelineno-1-167" href="#__codelineno-1-167"></a><span class="w">                                    </span><span class="s2">"height"</span>:<span class="w"> </span><span class="m">53</span>.791130185979995,
+<a id="__codelineno-1-168" name="__codelineno-1-168" href="#__codelineno-1-168"></a><span class="w">                                    </span><span class="s2">"label"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-169" name="__codelineno-1-169" href="#__codelineno-1-169"></a><span class="w">                                        </span><span class="o">{</span>
+<a id="__codelineno-1-170" name="__codelineno-1-170" href="#__codelineno-1-170"></a><span class="w">                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"人"</span>,
+<a id="__codelineno-1-171" name="__codelineno-1-171" href="#__codelineno-1-171"></a><span class="w">                                            </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-172" name="__codelineno-1-172" href="#__codelineno-1-172"></a><span class="w">                                                </span><span class="o">{</span>
+<a id="__codelineno-1-173" name="__codelineno-1-173" href="#__codelineno-1-173"></a><span class="w">                                                    </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"性别"</span>,
+<a id="__codelineno-1-174" name="__codelineno-1-174" href="#__codelineno-1-174"></a><span class="w">                                                    </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-175" name="__codelineno-1-175" href="#__codelineno-1-175"></a><span class="w">                                                        </span><span class="o">{</span>
+<a id="__codelineno-1-176" name="__codelineno-1-176" href="#__codelineno-1-176"></a><span class="w">                                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"女"</span>
+<a id="__codelineno-1-177" name="__codelineno-1-177" href="#__codelineno-1-177"></a><span class="w">                                                        </span><span class="o">}</span>
+<a id="__codelineno-1-178" name="__codelineno-1-178" href="#__codelineno-1-178"></a><span class="w">                                                    </span><span class="o">]</span>
+<a id="__codelineno-1-179" name="__codelineno-1-179" href="#__codelineno-1-179"></a><span class="w">                                                </span><span class="o">}</span>
+<a id="__codelineno-1-180" name="__codelineno-1-180" href="#__codelineno-1-180"></a><span class="w">                                            </span><span class="o">]</span>
+<a id="__codelineno-1-181" name="__codelineno-1-181" href="#__codelineno-1-181"></a><span class="w">                                        </span><span class="o">}</span>
+<a id="__codelineno-1-182" name="__codelineno-1-182" href="#__codelineno-1-182"></a><span class="w">                                    </span><span class="o">]</span>
+<a id="__codelineno-1-183" name="__codelineno-1-183" href="#__codelineno-1-183"></a><span class="w">                                </span><span class="o">}</span>,
+<a id="__codelineno-1-184" name="__codelineno-1-184" href="#__codelineno-1-184"></a><span class="w">                                </span><span class="o">{</span>
+<a id="__codelineno-1-185" name="__codelineno-1-185" href="#__codelineno-1-185"></a><span class="w">                                    </span><span class="s2">"frame"</span>:<span class="w"> </span><span class="m">81</span>,
+<a id="__codelineno-1-186" name="__codelineno-1-186" href="#__codelineno-1-186"></a><span class="w">                                    </span><span class="s2">"enabled"</span>:<span class="w"> </span>true,
+<a id="__codelineno-1-187" name="__codelineno-1-187" href="#__codelineno-1-187"></a><span class="w">                                    </span><span class="s2">"time"</span>:<span class="w"> </span><span class="m">3</span>.416666,
+<a id="__codelineno-1-188" name="__codelineno-1-188" href="#__codelineno-1-188"></a><span class="w">                                    </span><span class="s2">"is_reflected"</span>:<span class="w"> </span>false,
+<a id="__codelineno-1-189" name="__codelineno-1-189" href="#__codelineno-1-189"></a><span class="w">                                    </span><span class="s2">"rotation"</span>:<span class="w"> </span><span class="m">0</span>,
+<a id="__codelineno-1-190" name="__codelineno-1-190" href="#__codelineno-1-190"></a><span class="w">                                    </span><span class="s2">"x"</span>:<span class="w"> </span><span class="m">26</span>.07296137339059,
+<a id="__codelineno-1-191" name="__codelineno-1-191" href="#__codelineno-1-191"></a><span class="w">                                    </span><span class="s2">"y"</span>:<span class="w"> </span><span class="m">46</span>.08965188364326,
+<a id="__codelineno-1-192" name="__codelineno-1-192" href="#__codelineno-1-192"></a><span class="w">                                    </span><span class="s2">"width"</span>:<span class="w"> </span><span class="m">11</span>.909871244635125,
+<a id="__codelineno-1-193" name="__codelineno-1-193" href="#__codelineno-1-193"></a><span class="w">                                    </span><span class="s2">"height"</span>:<span class="w"> </span><span class="m">53</span>.79113018598001,
+<a id="__codelineno-1-194" name="__codelineno-1-194" href="#__codelineno-1-194"></a><span class="w">                                    </span><span class="s2">"label"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-195" name="__codelineno-1-195" href="#__codelineno-1-195"></a><span class="w">                                        </span><span class="o">{</span>
+<a id="__codelineno-1-196" name="__codelineno-1-196" href="#__codelineno-1-196"></a><span class="w">                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"人"</span>,
+<a id="__codelineno-1-197" name="__codelineno-1-197" href="#__codelineno-1-197"></a><span class="w">                                            </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-198" name="__codelineno-1-198" href="#__codelineno-1-198"></a><span class="w">                                                </span><span class="o">{</span>
+<a id="__codelineno-1-199" name="__codelineno-1-199" href="#__codelineno-1-199"></a><span class="w">                                                    </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"性别"</span>,
+<a id="__codelineno-1-200" name="__codelineno-1-200" href="#__codelineno-1-200"></a><span class="w">                                                    </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-201" name="__codelineno-1-201" href="#__codelineno-1-201"></a><span class="w">                                                        </span><span class="o">{</span>
+<a id="__codelineno-1-202" name="__codelineno-1-202" href="#__codelineno-1-202"></a><span class="w">                                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"女"</span>
+<a id="__codelineno-1-203" name="__codelineno-1-203" href="#__codelineno-1-203"></a><span class="w">                                                        </span><span class="o">}</span>
+<a id="__codelineno-1-204" name="__codelineno-1-204" href="#__codelineno-1-204"></a><span class="w">                                                    </span><span class="o">]</span>
+<a id="__codelineno-1-205" name="__codelineno-1-205" href="#__codelineno-1-205"></a><span class="w">                                                </span><span class="o">}</span>
+<a id="__codelineno-1-206" name="__codelineno-1-206" href="#__codelineno-1-206"></a><span class="w">                                            </span><span class="o">]</span>
+<a id="__codelineno-1-207" name="__codelineno-1-207" href="#__codelineno-1-207"></a><span class="w">                                        </span><span class="o">}</span>
+<a id="__codelineno-1-208" name="__codelineno-1-208" href="#__codelineno-1-208"></a><span class="w">                                    </span><span class="o">]</span>
+<a id="__codelineno-1-209" name="__codelineno-1-209" href="#__codelineno-1-209"></a><span class="w">                                </span><span class="o">}</span>,
+<a id="__codelineno-1-210" name="__codelineno-1-210" href="#__codelineno-1-210"></a><span class="w">                                </span><span class="o">{</span>
+<a id="__codelineno-1-211" name="__codelineno-1-211" href="#__codelineno-1-211"></a><span class="w">                                    </span><span class="s2">"frame"</span>:<span class="w"> </span><span class="m">87</span>,
+<a id="__codelineno-1-212" name="__codelineno-1-212" href="#__codelineno-1-212"></a><span class="w">                                    </span><span class="s2">"enabled"</span>:<span class="w"> </span>true,
+<a id="__codelineno-1-213" name="__codelineno-1-213" href="#__codelineno-1-213"></a><span class="w">                                    </span><span class="s2">"time"</span>:<span class="w"> </span><span class="m">3</span>.666666,
+<a id="__codelineno-1-214" name="__codelineno-1-214" href="#__codelineno-1-214"></a><span class="w">                                    </span><span class="s2">"is_reflected"</span>:<span class="w"> </span>false,
+<a id="__codelineno-1-215" name="__codelineno-1-215" href="#__codelineno-1-215"></a><span class="w">                                    </span><span class="s2">"rotation"</span>:<span class="w"> </span><span class="m">0</span>,
+<a id="__codelineno-1-216" name="__codelineno-1-216" href="#__codelineno-1-216"></a><span class="w">                                    </span><span class="s2">"x"</span>:<span class="w"> </span><span class="m">26</span>.07296137339059,
+<a id="__codelineno-1-217" name="__codelineno-1-217" href="#__codelineno-1-217"></a><span class="w">                                    </span><span class="s2">"y"</span>:<span class="w"> </span><span class="m">46</span>.4711492608488,
+<a id="__codelineno-1-218" name="__codelineno-1-218" href="#__codelineno-1-218"></a><span class="w">                                    </span><span class="s2">"width"</span>:<span class="w"> </span><span class="m">11</span>.909871244635125,
+<a id="__codelineno-1-219" name="__codelineno-1-219" href="#__codelineno-1-219"></a><span class="w">                                    </span><span class="s2">"height"</span>:<span class="w"> </span><span class="m">53</span>.40963280877447,
+<a id="__codelineno-1-220" name="__codelineno-1-220" href="#__codelineno-1-220"></a><span class="w">                                    </span><span class="s2">"label"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-221" name="__codelineno-1-221" href="#__codelineno-1-221"></a><span class="w">                                        </span><span class="o">{</span>
+<a id="__codelineno-1-222" name="__codelineno-1-222" href="#__codelineno-1-222"></a><span class="w">                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"人"</span>,
+<a id="__codelineno-1-223" name="__codelineno-1-223" href="#__codelineno-1-223"></a><span class="w">                                            </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-224" name="__codelineno-1-224" href="#__codelineno-1-224"></a><span class="w">                                                </span><span class="o">{</span>
+<a id="__codelineno-1-225" name="__codelineno-1-225" href="#__codelineno-1-225"></a><span class="w">                                                    </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"性别"</span>,
+<a id="__codelineno-1-226" name="__codelineno-1-226" href="#__codelineno-1-226"></a><span class="w">                                                    </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-227" name="__codelineno-1-227" href="#__codelineno-1-227"></a><span class="w">                                                        </span><span class="o">{</span>
+<a id="__codelineno-1-228" name="__codelineno-1-228" href="#__codelineno-1-228"></a><span class="w">                                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"女"</span>
+<a id="__codelineno-1-229" name="__codelineno-1-229" href="#__codelineno-1-229"></a><span class="w">                                                        </span><span class="o">}</span>
+<a id="__codelineno-1-230" name="__codelineno-1-230" href="#__codelineno-1-230"></a><span class="w">                                                    </span><span class="o">]</span>
+<a id="__codelineno-1-231" name="__codelineno-1-231" href="#__codelineno-1-231"></a><span class="w">                                                </span><span class="o">}</span>
+<a id="__codelineno-1-232" name="__codelineno-1-232" href="#__codelineno-1-232"></a><span class="w">                                            </span><span class="o">]</span>
+<a id="__codelineno-1-233" name="__codelineno-1-233" href="#__codelineno-1-233"></a><span class="w">                                        </span><span class="o">}</span>
+<a id="__codelineno-1-234" name="__codelineno-1-234" href="#__codelineno-1-234"></a><span class="w">                                    </span><span class="o">]</span>
+<a id="__codelineno-1-235" name="__codelineno-1-235" href="#__codelineno-1-235"></a><span class="w">                                </span><span class="o">}</span>
+<a id="__codelineno-1-236" name="__codelineno-1-236" href="#__codelineno-1-236"></a><span class="w">                            </span><span class="o">]</span>
+<a id="__codelineno-1-237" name="__codelineno-1-237" href="#__codelineno-1-237"></a><span class="w">                        </span><span class="o">}</span>
+<a id="__codelineno-1-238" name="__codelineno-1-238" href="#__codelineno-1-238"></a><span class="w">                    </span><span class="o">}</span>,
+<a id="__codelineno-1-239" name="__codelineno-1-239" href="#__codelineno-1-239"></a><span class="w">                    </span><span class="o">{</span>
+<a id="__codelineno-1-240" name="__codelineno-1-240" href="#__codelineno-1-240"></a><span class="w">                        </span><span class="s2">"from_name"</span>:<span class="w"> </span><span class="s2">"box"</span>,
+<a id="__codelineno-1-241" name="__codelineno-1-241" href="#__codelineno-1-241"></a><span class="w">                        </span><span class="s2">"to_name"</span>:<span class="w"> </span><span class="s2">"video"</span>,
+<a id="__codelineno-1-242" name="__codelineno-1-242" href="#__codelineno-1-242"></a><span class="w">                        </span><span class="s2">"id"</span>:<span class="w"> </span><span class="s2">"7a8d94a4-76fa-4e7c-ad06-fffd72991995"</span>,
+<a id="__codelineno-1-243" name="__codelineno-1-243" href="#__codelineno-1-243"></a><span class="w">                        </span><span class="s2">"type"</span>:<span class="w"> </span><span class="s2">"videorectangle"</span>,
+<a id="__codelineno-1-244" name="__codelineno-1-244" href="#__codelineno-1-244"></a><span class="w">                        </span><span class="s2">"origin"</span>:<span class="w"> </span><span class="s2">"manual"</span>,
+<a id="__codelineno-1-245" name="__codelineno-1-245" href="#__codelineno-1-245"></a><span class="w">                        </span><span class="s2">"value"</span>:<span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-1-246" name="__codelineno-1-246" href="#__codelineno-1-246"></a><span class="w">                            </span><span class="s2">"framesCount"</span>:<span class="w"> </span><span class="m">464</span>,
+<a id="__codelineno-1-247" name="__codelineno-1-247" href="#__codelineno-1-247"></a><span class="w">                            </span><span class="s2">"duration"</span>:<span class="w"> </span><span class="m">19</span>.333332,
+<a id="__codelineno-1-248" name="__codelineno-1-248" href="#__codelineno-1-248"></a><span class="w">                            </span><span class="s2">"labels"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-249" name="__codelineno-1-249" href="#__codelineno-1-249"></a><span class="w">                                </span><span class="s2">"车"</span>
+<a id="__codelineno-1-250" name="__codelineno-1-250" href="#__codelineno-1-250"></a><span class="w">                            </span><span class="o">]</span>,
+<a id="__codelineno-1-251" name="__codelineno-1-251" href="#__codelineno-1-251"></a><span class="w">                            </span><span class="s2">"sequence"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-252" name="__codelineno-1-252" href="#__codelineno-1-252"></a><span class="w">                                </span><span class="o">{</span>
+<a id="__codelineno-1-253" name="__codelineno-1-253" href="#__codelineno-1-253"></a><span class="w">                                    </span><span class="s2">"frame"</span>:<span class="w"> </span><span class="m">0</span>,
+<a id="__codelineno-1-254" name="__codelineno-1-254" href="#__codelineno-1-254"></a><span class="w">                                    </span><span class="s2">"enabled"</span>:<span class="w"> </span>true,
+<a id="__codelineno-1-255" name="__codelineno-1-255" href="#__codelineno-1-255"></a><span class="w">                                    </span><span class="s2">"time"</span>:<span class="w"> </span><span class="m">0</span>.041666,
+<a id="__codelineno-1-256" name="__codelineno-1-256" href="#__codelineno-1-256"></a><span class="w">                                    </span><span class="s2">"is_reflected"</span>:<span class="w"> </span>false,
+<a id="__codelineno-1-257" name="__codelineno-1-257" href="#__codelineno-1-257"></a><span class="w">                                    </span><span class="s2">"rotation"</span>:<span class="w"> </span><span class="m">0</span>,
+<a id="__codelineno-1-258" name="__codelineno-1-258" href="#__codelineno-1-258"></a><span class="w">                                    </span><span class="s2">"x"</span>:<span class="w"> </span><span class="m">45</span>.81545064377677,
+<a id="__codelineno-1-259" name="__codelineno-1-259" href="#__codelineno-1-259"></a><span class="w">                                    </span><span class="s2">"y"</span>:<span class="w"> </span><span class="m">38</span>.07820696232714,
+<a id="__codelineno-1-260" name="__codelineno-1-260" href="#__codelineno-1-260"></a><span class="w">                                    </span><span class="s2">"width"</span>:<span class="w"> </span><span class="m">47</span>.532188841201695,
+<a id="__codelineno-1-261" name="__codelineno-1-261" href="#__codelineno-1-261"></a><span class="w">                                    </span><span class="s2">"height"</span>:<span class="w"> </span><span class="m">40</span>.820219360991885,
+<a id="__codelineno-1-262" name="__codelineno-1-262" href="#__codelineno-1-262"></a><span class="w">                                    </span><span class="s2">"label"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-263" name="__codelineno-1-263" href="#__codelineno-1-263"></a><span class="w">                                        </span><span class="o">{</span>
+<a id="__codelineno-1-264" name="__codelineno-1-264" href="#__codelineno-1-264"></a><span class="w">                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"车"</span>,
+<a id="__codelineno-1-265" name="__codelineno-1-265" href="#__codelineno-1-265"></a><span class="w">                                            </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-266" name="__codelineno-1-266" href="#__codelineno-1-266"></a><span class="w">                                                </span><span class="o">{</span>
+<a id="__codelineno-1-267" name="__codelineno-1-267" href="#__codelineno-1-267"></a><span class="w">                                                    </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"颜色"</span>,
+<a id="__codelineno-1-268" name="__codelineno-1-268" href="#__codelineno-1-268"></a><span class="w">                                                    </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-269" name="__codelineno-1-269" href="#__codelineno-1-269"></a><span class="w">                                                        </span><span class="o">{</span>
+<a id="__codelineno-1-270" name="__codelineno-1-270" href="#__codelineno-1-270"></a><span class="w">                                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"灰"</span>
+<a id="__codelineno-1-271" name="__codelineno-1-271" href="#__codelineno-1-271"></a><span class="w">                                                        </span><span class="o">}</span>
+<a id="__codelineno-1-272" name="__codelineno-1-272" href="#__codelineno-1-272"></a><span class="w">                                                    </span><span class="o">]</span>
+<a id="__codelineno-1-273" name="__codelineno-1-273" href="#__codelineno-1-273"></a><span class="w">                                                </span><span class="o">}</span>
+<a id="__codelineno-1-274" name="__codelineno-1-274" href="#__codelineno-1-274"></a><span class="w">                                            </span><span class="o">]</span>
+<a id="__codelineno-1-275" name="__codelineno-1-275" href="#__codelineno-1-275"></a><span class="w">                                        </span><span class="o">}</span>
+<a id="__codelineno-1-276" name="__codelineno-1-276" href="#__codelineno-1-276"></a><span class="w">                                    </span><span class="o">]</span>
+<a id="__codelineno-1-277" name="__codelineno-1-277" href="#__codelineno-1-277"></a><span class="w">                                </span><span class="o">}</span>,
+<a id="__codelineno-1-278" name="__codelineno-1-278" href="#__codelineno-1-278"></a><span class="w">                                </span><span class="o">{</span>
+<a id="__codelineno-1-279" name="__codelineno-1-279" href="#__codelineno-1-279"></a><span class="w">                                    </span><span class="s2">"frame"</span>:<span class="w"> </span><span class="m">10</span>,
+<a id="__codelineno-1-280" name="__codelineno-1-280" href="#__codelineno-1-280"></a><span class="w">                                    </span><span class="s2">"enabled"</span>:<span class="w"> </span>true,
+<a id="__codelineno-1-281" name="__codelineno-1-281" href="#__codelineno-1-281"></a><span class="w">                                    </span><span class="s2">"time"</span>:<span class="w"> </span><span class="m">0</span>.458333,
+<a id="__codelineno-1-282" name="__codelineno-1-282" href="#__codelineno-1-282"></a><span class="w">                                    </span><span class="s2">"is_reflected"</span>:<span class="w"> </span>false,
+<a id="__codelineno-1-283" name="__codelineno-1-283" href="#__codelineno-1-283"></a><span class="w">                                    </span><span class="s2">"rotation"</span>:<span class="w"> </span><span class="m">0</span>,
+<a id="__codelineno-1-284" name="__codelineno-1-284" href="#__codelineno-1-284"></a><span class="w">                                    </span><span class="s2">"x"</span>:<span class="w"> </span><span class="m">45</span>.49356223175963,
+<a id="__codelineno-1-285" name="__codelineno-1-285" href="#__codelineno-1-285"></a><span class="w">                                    </span><span class="s2">"y"</span>:<span class="w"> </span><span class="m">38</span>.0782069623269,
+<a id="__codelineno-1-286" name="__codelineno-1-286" href="#__codelineno-1-286"></a><span class="w">                                    </span><span class="s2">"width"</span>:<span class="w"> </span><span class="m">46</span>.88841201716729,
+<a id="__codelineno-1-287" name="__codelineno-1-287" href="#__codelineno-1-287"></a><span class="w">                                    </span><span class="s2">"height"</span>:<span class="w"> </span><span class="m">40</span>.82021936099179,
+<a id="__codelineno-1-288" name="__codelineno-1-288" href="#__codelineno-1-288"></a><span class="w">                                    </span><span class="s2">"label"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-289" name="__codelineno-1-289" href="#__codelineno-1-289"></a><span class="w">                                        </span><span class="o">{</span>
+<a id="__codelineno-1-290" name="__codelineno-1-290" href="#__codelineno-1-290"></a><span class="w">                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"车"</span>,
+<a id="__codelineno-1-291" name="__codelineno-1-291" href="#__codelineno-1-291"></a><span class="w">                                            </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-292" name="__codelineno-1-292" href="#__codelineno-1-292"></a><span class="w">                                                </span><span class="o">{</span>
+<a id="__codelineno-1-293" name="__codelineno-1-293" href="#__codelineno-1-293"></a><span class="w">                                                    </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"颜色"</span>,
+<a id="__codelineno-1-294" name="__codelineno-1-294" href="#__codelineno-1-294"></a><span class="w">                                                    </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-295" name="__codelineno-1-295" href="#__codelineno-1-295"></a><span class="w">                                                        </span><span class="o">{</span>
+<a id="__codelineno-1-296" name="__codelineno-1-296" href="#__codelineno-1-296"></a><span class="w">                                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"灰"</span>
+<a id="__codelineno-1-297" name="__codelineno-1-297" href="#__codelineno-1-297"></a><span class="w">                                                        </span><span class="o">}</span>
+<a id="__codelineno-1-298" name="__codelineno-1-298" href="#__codelineno-1-298"></a><span class="w">                                                    </span><span class="o">]</span>
+<a id="__codelineno-1-299" name="__codelineno-1-299" href="#__codelineno-1-299"></a><span class="w">                                                </span><span class="o">}</span>
+<a id="__codelineno-1-300" name="__codelineno-1-300" href="#__codelineno-1-300"></a><span class="w">                                            </span><span class="o">]</span>
+<a id="__codelineno-1-301" name="__codelineno-1-301" href="#__codelineno-1-301"></a><span class="w">                                        </span><span class="o">}</span>
+<a id="__codelineno-1-302" name="__codelineno-1-302" href="#__codelineno-1-302"></a><span class="w">                                    </span><span class="o">]</span>
+<a id="__codelineno-1-303" name="__codelineno-1-303" href="#__codelineno-1-303"></a><span class="w">                                </span><span class="o">}</span>,
+<a id="__codelineno-1-304" name="__codelineno-1-304" href="#__codelineno-1-304"></a><span class="w">                                </span><span class="o">{</span>
+<a id="__codelineno-1-305" name="__codelineno-1-305" href="#__codelineno-1-305"></a><span class="w">                                    </span><span class="s2">"frame"</span>:<span class="w"> </span><span class="m">16</span>,
+<a id="__codelineno-1-306" name="__codelineno-1-306" href="#__codelineno-1-306"></a><span class="w">                                    </span><span class="s2">"enabled"</span>:<span class="w"> </span>true,
+<a id="__codelineno-1-307" name="__codelineno-1-307" href="#__codelineno-1-307"></a><span class="w">                                    </span><span class="s2">"time"</span>:<span class="w"> </span><span class="m">0</span>.708333,
+<a id="__codelineno-1-308" name="__codelineno-1-308" href="#__codelineno-1-308"></a><span class="w">                                    </span><span class="s2">"is_reflected"</span>:<span class="w"> </span>false,
+<a id="__codelineno-1-309" name="__codelineno-1-309" href="#__codelineno-1-309"></a><span class="w">                                    </span><span class="s2">"rotation"</span>:<span class="w"> </span><span class="m">0</span>,
+<a id="__codelineno-1-310" name="__codelineno-1-310" href="#__codelineno-1-310"></a><span class="w">                                    </span><span class="s2">"x"</span>:<span class="w"> </span><span class="m">44</span>.957081545064355,
+<a id="__codelineno-1-311" name="__codelineno-1-311" href="#__codelineno-1-311"></a><span class="w">                                    </span><span class="s2">"y"</span>:<span class="w"> </span><span class="m">38</span>.078206962326895,
+<a id="__codelineno-1-312" name="__codelineno-1-312" href="#__codelineno-1-312"></a><span class="w">                                    </span><span class="s2">"width"</span>:<span class="w"> </span><span class="m">47</span>.42489270386257,
+<a id="__codelineno-1-313" name="__codelineno-1-313" href="#__codelineno-1-313"></a><span class="w">                                    </span><span class="s2">"height"</span>:<span class="w"> </span><span class="m">40</span>.82021936099178,
+<a id="__codelineno-1-314" name="__codelineno-1-314" href="#__codelineno-1-314"></a><span class="w">                                    </span><span class="s2">"label"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-315" name="__codelineno-1-315" href="#__codelineno-1-315"></a><span class="w">                                        </span><span class="o">{</span>
+<a id="__codelineno-1-316" name="__codelineno-1-316" href="#__codelineno-1-316"></a><span class="w">                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"车"</span>,
+<a id="__codelineno-1-317" name="__codelineno-1-317" href="#__codelineno-1-317"></a><span class="w">                                            </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-318" name="__codelineno-1-318" href="#__codelineno-1-318"></a><span class="w">                                                </span><span class="o">{</span>
+<a id="__codelineno-1-319" name="__codelineno-1-319" href="#__codelineno-1-319"></a><span class="w">                                                    </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"颜色"</span>,
+<a id="__codelineno-1-320" name="__codelineno-1-320" href="#__codelineno-1-320"></a><span class="w">                                                    </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-321" name="__codelineno-1-321" href="#__codelineno-1-321"></a><span class="w">                                                        </span><span class="o">{</span>
+<a id="__codelineno-1-322" name="__codelineno-1-322" href="#__codelineno-1-322"></a><span class="w">                                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"灰"</span>
+<a id="__codelineno-1-323" name="__codelineno-1-323" href="#__codelineno-1-323"></a><span class="w">                                                        </span><span class="o">}</span>
+<a id="__codelineno-1-324" name="__codelineno-1-324" href="#__codelineno-1-324"></a><span class="w">                                                    </span><span class="o">]</span>
+<a id="__codelineno-1-325" name="__codelineno-1-325" href="#__codelineno-1-325"></a><span class="w">                                                </span><span class="o">}</span>
+<a id="__codelineno-1-326" name="__codelineno-1-326" href="#__codelineno-1-326"></a><span class="w">                                            </span><span class="o">]</span>
+<a id="__codelineno-1-327" name="__codelineno-1-327" href="#__codelineno-1-327"></a><span class="w">                                        </span><span class="o">}</span>
+<a id="__codelineno-1-328" name="__codelineno-1-328" href="#__codelineno-1-328"></a><span class="w">                                    </span><span class="o">]</span>
+<a id="__codelineno-1-329" name="__codelineno-1-329" href="#__codelineno-1-329"></a><span class="w">                                </span><span class="o">}</span>,
+<a id="__codelineno-1-330" name="__codelineno-1-330" href="#__codelineno-1-330"></a><span class="w">                                </span><span class="o">{</span>
+<a id="__codelineno-1-331" name="__codelineno-1-331" href="#__codelineno-1-331"></a><span class="w">                                    </span><span class="s2">"frame"</span>:<span class="w"> </span><span class="m">26</span>,
+<a id="__codelineno-1-332" name="__codelineno-1-332" href="#__codelineno-1-332"></a><span class="w">                                    </span><span class="s2">"enabled"</span>:<span class="w"> </span>true,
+<a id="__codelineno-1-333" name="__codelineno-1-333" href="#__codelineno-1-333"></a><span class="w">                                    </span><span class="s2">"time"</span>:<span class="w"> </span><span class="m">1</span>.125,
+<a id="__codelineno-1-334" name="__codelineno-1-334" href="#__codelineno-1-334"></a><span class="w">                                    </span><span class="s2">"is_reflected"</span>:<span class="w"> </span>false,
+<a id="__codelineno-1-335" name="__codelineno-1-335" href="#__codelineno-1-335"></a><span class="w">                                    </span><span class="s2">"rotation"</span>:<span class="w"> </span><span class="m">0</span>,
+<a id="__codelineno-1-336" name="__codelineno-1-336" href="#__codelineno-1-336"></a><span class="w">                                    </span><span class="s2">"x"</span>:<span class="w"> </span><span class="m">44</span>.09871244635187,
+<a id="__codelineno-1-337" name="__codelineno-1-337" href="#__codelineno-1-337"></a><span class="w">                                    </span><span class="s2">"y"</span>:<span class="w"> </span><span class="m">38</span>.078206962326874,
+<a id="__codelineno-1-338" name="__codelineno-1-338" href="#__codelineno-1-338"></a><span class="w">                                    </span><span class="s2">"width"</span>:<span class="w"> </span><span class="m">47</span>.85407725321882,
+<a id="__codelineno-1-339" name="__codelineno-1-339" href="#__codelineno-1-339"></a><span class="w">                                    </span><span class="s2">"height"</span>:<span class="w"> </span><span class="m">40</span>.82021936099176,
+<a id="__codelineno-1-340" name="__codelineno-1-340" href="#__codelineno-1-340"></a><span class="w">                                    </span><span class="s2">"label"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-341" name="__codelineno-1-341" href="#__codelineno-1-341"></a><span class="w">                                        </span><span class="o">{</span>
+<a id="__codelineno-1-342" name="__codelineno-1-342" href="#__codelineno-1-342"></a><span class="w">                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"车"</span>,
+<a id="__codelineno-1-343" name="__codelineno-1-343" href="#__codelineno-1-343"></a><span class="w">                                            </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-344" name="__codelineno-1-344" href="#__codelineno-1-344"></a><span class="w">                                                </span><span class="o">{</span>
+<a id="__codelineno-1-345" name="__codelineno-1-345" href="#__codelineno-1-345"></a><span class="w">                                                    </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"颜色"</span>,
+<a id="__codelineno-1-346" name="__codelineno-1-346" href="#__codelineno-1-346"></a><span class="w">                                                    </span><span class="s2">"children"</span>:<span class="w"> </span><span class="o">[</span>
+<a id="__codelineno-1-347" name="__codelineno-1-347" href="#__codelineno-1-347"></a><span class="w">                                                        </span><span class="o">{</span>
+<a id="__codelineno-1-348" name="__codelineno-1-348" href="#__codelineno-1-348"></a><span class="w">                                                            </span><span class="s2">"name"</span>:<span class="w"> </span><span class="s2">"灰"</span>
+<a id="__codelineno-1-349" name="__codelineno-1-349" href="#__codelineno-1-349"></a><span class="w">                                                        </span><span class="o">}</span>
+<a id="__codelineno-1-350" name="__codelineno-1-350" href="#__codelineno-1-350"></a><span class="w">                                                    </span><span class="o">]</span>
+<a id="__codelineno-1-351" name="__codelineno-1-351" href="#__codelineno-1-351"></a><span class="w">                                                </span><span class="o">}</span>
+<a id="__codelineno-1-352" name="__codelineno-1-352" href="#__codelineno-1-352"></a><span class="w">                                            </span><span class="o">]</span>
+<a id="__codelineno-1-353" name="__codelineno-1-353" href="#__codelineno-1-353"></a><span class="w">                                        </span><span class="o">}</span>
+<a id="__codelineno-1-354" name="__codelineno-1-354" href="#__codelineno-1-354"></a><span class="w">                                    </span><span class="o">]</span>
+<a id="__codelineno-1-355" name="__codelineno-1-355" href="#__codelineno-1-355"></a><span class="w">                                </span><span class="o">}</span>
+<a id="__codelineno-1-356" name="__codelineno-1-356" href="#__codelineno-1-356"></a><span class="w">                            </span><span class="o">]</span>
+<a id="__codelineno-1-357" name="__codelineno-1-357" href="#__codelineno-1-357"></a><span class="w">                        </span><span class="o">}</span>
+<a id="__codelineno-1-358" name="__codelineno-1-358" href="#__codelineno-1-358"></a><span class="w">                    </span><span class="o">}</span>
+<a id="__codelineno-1-359" name="__codelineno-1-359" href="#__codelineno-1-359"></a><span class="w">                </span><span class="o">]</span>
+<a id="__codelineno-1-360" name="__codelineno-1-360" href="#__codelineno-1-360"></a><span class="w">            </span><span class="o">}</span>
+<a id="__codelineno-1-361" name="__codelineno-1-361" href="#__codelineno-1-361"></a><span class="w">        </span><span class="o">]</span>
+<a id="__codelineno-1-362" name="__codelineno-1-362" href="#__codelineno-1-362"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-1-363" name="__codelineno-1-363" href="#__codelineno-1-363"></a><span class="o">]</span>
+</code></pre></div>
+<h2 id="labelfree-video-multi-json">LabelFree Video (multi json)</h2>
+<h3 id="_2">目录结构</h3>
+<p>一个视频对应一个json文件，视频文件和对应的json文件同名</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="mi">-</span><span class="w"> </span><span class="err">videos</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="mi">-</span><span class="w"> </span><span class="mf">1.</span><span class="err">mp</span><span class="mi">4</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="mi">-</span><span class="w"> </span><span class="mf">2.</span><span class="err">mp</span><span class="mi">4</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="mi">-</span><span class="w"> </span><span class="err">a</span><span class="kc">nn</span><span class="err">o</span><span class="kc">tat</span><span class="err">io</span><span class="kc">ns</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="mi">-</span><span class="w"> </span><span class="mf">1.</span><span class="err">jso</span><span class="kc">n</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="mi">-</span><span class="w"> </span><span class="mf">2.</span><span class="err">jso</span><span class="kc">n</span>
+</code></pre></div>
+<h3 id="json_1">json格式</h3>
+<p>同LabelFree Video (single json)</p>
+<h2 id="ae-video">AE Video</h2>
+<blockquote>
+<p>此格式仅支持导入，不支持导出</p>
+</blockquote>
+<h3 id="_3">目录结构</h3>
+<p>一个视频对应一个json文件，视频文件和对应的json文件同名</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="mi">-</span><span class="w"> </span><span class="err">videos</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="mi">-</span><span class="w"> </span><span class="mf">1.</span><span class="err">mp</span><span class="mi">4</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="mi">-</span><span class="w"> </span><span class="mf">2.</span><span class="err">mp</span><span class="mi">4</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="mi">-</span><span class="w"> </span><span class="err">a</span><span class="kc">nn</span><span class="err">o</span><span class="kc">tat</span><span class="err">io</span><span class="kc">ns</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="mi">-</span><span class="w"> </span><span class="mf">1.</span><span class="err">jso</span><span class="kc">n</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="mi">-</span><span class="w"> </span><span class="mf">2.</span><span class="err">jso</span><span class="kc">n</span>
+</code></pre></div>
+<h3 id="json_2">json格式</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>必选</th>
+<th>中文名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>video_name</strong></td>
+<td>string</td>
+<td>true</td>
+<td>视频文件名</td>
+<td>文件名，默认在videos目录下</td>
+</tr>
+<tr>
+<td><strong>label_info</strong></td>
+<td>[object]</td>
+<td>true</td>
+<td>标注信息</td>
+<td>标注信息</td>
+</tr>
+<tr>
+<td><strong>» frame_id</strong></td>
+<td>integer</td>
+<td>true</td>
+<td>帧号</td>
+<td>从1开始</td>
+</tr>
+<tr>
+<td><strong>» bbox_info</strong></td>
+<td>[object]</td>
+<td>true</td>
+<td></td>
+<td>none</td>
+</tr>
+<tr>
+<td><strong>»» label</strong></td>
+<td>string</td>
+<td>true</td>
+<td>标签</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>»» box</strong></td>
+<td>[int]</td>
+<td>false</td>
+<td>检测框</td>
+<td>[x1,y1,x2,y2]</td>
+</tr>
+</tbody>
+</table>
+<p>json示例</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nt">"video_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123.mp4"</span><span class="p">,</span><span class="w">  </span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">"label_info"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">            </span><span class="nt">"frame_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">            </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fight"</span><span class="p">,</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">            </span><span class="nt">"bbox_info"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">                </span><span class="p">{</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">                    </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"p1"</span><span class="p">,</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">                    </span><span class="nt">"box"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">                        </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">                        </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">                        </span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">                        </span><span class="mi">4</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">                    </span><span class="p">]</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">                </span><span class="p">},</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">                </span><span class="p">{</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">                    </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"p1"</span><span class="p">,</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">                    </span><span class="nt">"box"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">                        </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">                        </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">                        </span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">                        </span><span class="mi">4</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">                    </span><span class="p">]</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">            </span><span class="p">]</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">            </span><span class="nt">"frame_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">            </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fight"</span><span class="p">,</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">            </span><span class="nt">"bbox_info"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="w">                </span><span class="p">{</span>
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="w">                    </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"p1"</span><span class="p">,</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="w">                    </span><span class="nt">"box"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="w">                        </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="w">                        </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="w">                        </span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a><span class="w">                        </span><span class="mi">4</span>
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="w">                    </span><span class="p">]</span>
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a><span class="w">                </span><span class="p">},</span>
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a><span class="w">                </span><span class="p">{</span>
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a><span class="w">                    </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"p1"</span><span class="p">,</span>
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a><span class="w">                    </span><span class="nt">"box"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a><span class="w">                        </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a><span class="w">                        </span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a><span class="w">                        </span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a><span class="w">                        </span><span class="mi">4</span>
+<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a><span class="w">                    </span><span class="p">]</span>
+<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a><span class="w">            </span><span class="p">]</span>
+<a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a><span class="p">}</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["content.images.zoom"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">document.querySelectorAll('.glightbox').forEach(function(element) {
+    try {
+        var img = element.querySelector('img');
+        if (img && img.src) {
+            element.setAttribute('href', img.src);
+        } else {
+            console.log('No img element with src attribute found');
+        }
+    } catch (error) {
+        console.log('Error:', error);
+    }
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
